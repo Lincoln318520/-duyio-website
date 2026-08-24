@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Request a Quote — DUYIO</title>
+<meta name="description" content="Tell DUYIO about the culture, occasion or story you want your next accessory to carry. We'll follow up with a sampled, ready-to-produce design." />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+<link rel="apple-touch-icon" href="assets/favicon-180.png" />
+<meta name="theme-color" content="#16110f" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html" aria-label="DUYIO home">
+      <img src="assets/logo.png" alt="DUYIO" />
+    </a>
+    <div class="nav-links-wrap">
+      <nav class="primary" aria-label="Primary">
+        <a href="index.html#collections">Collections</a>
+        <a href="index.html#quality">Design &amp; Quality</a>
+        <a href="index.html#studio">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-nav" href="request-quote.html">Request Quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="form-page">
+    <div class="wrap">
+      <div class="form-head">
+        <p class="eyebrow">Request a Quote</p>
+        <h1 style="font-size: clamp(2.1rem, 2.6vw + 1rem, 3rem); margin-top: 0.7rem;">Tell us what you want to design.</h1>
+        <p>A few details on who you are and what you're looking for — we typically reply within 24 hours with next steps or a follow-up question.</p>
+      </div>
+
+      <div class="form-shell">
+        <form class="rfq-form" id="rfq-form" novalidate>
+          <div class="field">
+            <label for="firstName">First Name<span class="req">*</span></label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name<span class="req">*</span></label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+          </div>
+
+          <div class="field">
+            <label for="company">Your Company Name<span class="req">*</span></label>
+            <input type="text" id="company" name="company" autocomplete="organization" required />
+          </div>
+          <div class="field">
+            <label for="email">Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">WhatsApp / Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="e.g. +52 55 1234 5678" />
+          </div>
+          <div class="field">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="">Select your country…</option>
+            </select>
+            <span class="field-hint" id="geo-hint">Detecting your country automatically — you can change it.</span>
+          </div>
+
+          <div class="field field-full">
+            <label for="notes">Content / Notes<span class="req">*</span></label>
+            <textarea id="notes" name="notes" required placeholder="Tell us about the culture, occasion or product idea you have in mind…"></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary" id="submit-btn">Send Inquiry</button>
+            <span class="form-status" id="form-status" hidden></span>
+          </div>
+        </form>
+
+        <aside class="form-aside">
+          <h3>Prefer to talk directly?</h3>
+          <div class="aside-item">
+            <span class="label">WhatsApp</span>
+            <span class="val"><a class="btn btn-outline" href="https://wa.me/8618520399195" target="_blank" rel="noopener" style="margin-top:0.4rem;">Message on WhatsApp</a></span>
+          </div>
+          <div class="aside-item">
+            <span class="label">Email</span>
+            <span class="val">support@duyio.com</span>
+          </div>
+          <div class="aside-item">
+            <span class="label">Location</span>
+            <span class="val">Guangzhou, China</span>
+          </div>
+          <p class="note">Every inquiry reaches our team directly and is logged so nothing gets missed — this isn't a mailing list, and we don't share your details.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-row">
+    <p class="footer-legal">Guangzhou Duoyinfo Technology Co., Ltd. · Founded 2018<br />1922, Yuehai Plaza, Wanbo 2nd Road, Nancun Town, Panyu District, Guangzhou, Guangdong, 511400, China</p>
+    <nav aria-label="Footer">
+      <a href="index.html#collections">Collections</a>
+      <a href="index.html#quality">Design &amp; Quality</a>
+      <a href="index.html#studio">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Full world list, A–Z by name, so every visitor can find their own
+  // country. `code` is the ISO 3166-1 alpha-2 code, used only for the
+  // auto-detect match below. NOTE: not every name here has a matching
+  // option in the Vika "国家名称" field yet (that field only has ~180 messy
+  // legacy entries) — countries without a match still show here for a
+  // complete picker, but the server falls back to recording the country as
+  // free text in notes instead of the (missing) dropdown field. See
+  // functions/api/submit-rfq.js VALID_COUNTRIES for the exact matched set.
+  // Taiwan is intentionally labeled "Taiwan (China)" per company policy.
+  var COUNTRIES = [
+    { code: "AF", name: "Afghanistan" },
+    { code: "AL", name: "Albania" },
+    { code: "DZ", name: "Algeria" },
+    { code: "AD", name: "Andorra" },
+    { code: "AO", name: "Angola" },
+    { code: "AG", name: "Antigua and Barbuda" },
+    { code: "AR", name: "Argentina" },
+    { code: "AM", name: "Armenia" },
+    { code: "AU", name: "Australia" },
+    { code: "AT", name: "Austria" },
+    { code: "AZ", name: "Azerbaijan" },
+    { code: "BS", name: "Bahamas" },
+    { code: "BH", name: "Bahrain" },
+    { code: "BD", name: "Bangladesh" },
+    { code: "BB", name: "Barbados" },
+    { code: "BY", name: "Belarus" },
+    { code: "BE", name: "Belgium" },
+    { code: "BZ", name: "Belize" },
+    { code: "BJ", name: "Benin" },
+    { code: "BT", name: "Bhutan" },
+    { code: "BO", name: "Bolivia" },
+    { code: "BA", name: "Bosnia and Herzegovina" },
+    { code: "BW", name: "Botswana" },
+    { code: "BR", name: "Brazil" },
+    { code: "BN", name: "Brunei" },
+    { code: "BG", name: "Bulgaria" },
+    { code: "BF", name: "Burkina Faso" },
+    { code: "BI", name: "Burundi" },
+    { code: "KH", name: "Cambodia" },
+    { code: "CM", name: "Cameroon" },
+    { code: "CA", name: "Canada" },
+    { code: "CV", name: "Cape Verde" },
+    { code: "CF", name: "Central African Republic" },
+    { code: "TD", name: "Chad" },
+    { code: "CL", name: "Chile" },
+    { code: "CN", name: "China" },
+    { code: "CO", name: "Colombia" },
+    { code: "KM", name: "Comoros" },
+    { code: "CG", name: "Congo" },
+    { code: "CD", name: "Congo (DRC)" },
+    { code: "CR", name: "Costa Rica" },
+    { code: "HR", name: "Croatia" },
+    { code: "CU", name: "Cuba" },
+    { code: "CY", name: "Cyprus" },
+    { code: "CZ", name: "Czech Republic" },
+    { code: "DK", name: "Denmark" },
+    { code: "DJ", name: "Djibouti" },
+    { code: "DM", name: "Dominica" },
+    { code: "DO", name: "Dominican Republic" },
+    { code: "EC", name: "Ecuador" },
+    { code: "EG", name: "Egypt" },
+    { code: "SV", name: "El Salvador" },
+    { code: "GQ", name: "Equatorial Guinea" },
+    { code: "ER", name: "Eritrea" },
+    { code: "EE", name: "Estonia" },
+    { code: "SZ", name: "Eswatini" },
+    { code: "ET", name: "Ethiopia" },
+    { code: "FJ", name: "Fiji" },
+    { code: "FI", name: "Finland" },
+    { code: "FR", name: "France" },
+    { code: "GA", name: "Gabon" },
+    { code: "GM", name: "Gambia" },
+    { code: "GE", name: "Georgia" },
+    { code: "DE", name: "Germany" },
+    { code: "GH", name: "Ghana" },
+    { code: "GR", name: "Greece" },
+    { code: "GD", name: "Grenada" },
+    { code: "GT", name: "Guatemala" },
+    { code: "GN", name: "Guinea" },
+    { code: "GW", name: "Guinea-Bissau" },
+    { code: "GY", name: "Guyana" },
+    { code: "HT", name: "Haiti" },
+    { code: "HN", name: "Honduras" },
+    { code: "HK", name: "Hong Kong (China)" },
+    { code: "HU", name: "Hungary" },
+    { code: "IS", name: "Iceland" },
+    { code: "IN", name: "India" },
+    { code: "ID", name: "Indonesia" },
+    { code: "IR", name: "Iran" },
+    { code: "IQ", name: "Iraq" },
+    { code: "IE", name: "Ireland" },
+    { code: "IL", name: "Israel" },
+    { code: "IT", name: "Italy" },
+    { code: "JM", name: "Jamaica" },
+    { code: "JP", name: "Japan" },
+    { code: "JO", name: "Jordan" },
+    { code: "KZ", name: "Kazakhstan" },
+    { code: "KE", name: "Kenya" },
+    { code: "KI", name: "Kiribati" },
+    { code: "KW", name: "Kuwait" },
+    { code: "KG", name: "Kyrgyzstan" },
+    { code: "LA", name: "Laos" },
+    { code: "LV", name: "Latvia" },
+    { code: "LB", name: "Lebanon" },
+    { code: "LS", name: "Lesotho" },
+    { code: "LR", name: "Liberia" },
+    { code: "LY", name: "Libya" },
+    { code: "LI", name: "Liechtenstein" },
+    { code: "LT", name: "Lithuania" },
+    { code: "LU", name: "Luxembourg" },
+    { code: "MO", name: "Macau (China)" },
+    { code: "MG", name: "Madagascar" },
+    { code: "MW", name: "Malawi" },
+    { code: "MY", name: "Malaysia" },
+    { code: "MV", name: "Maldives" },
+    { code: "ML", name: "Mali" },
+    { code: "MT", name: "Malta" },
+    { code: "MR", name: "Mauritania" },
+    { code: "MU", name: "Mauritius" },
+    { code: "MX", name: "Mexico" },
+    { code: "MD", name: "Moldova" },
+    { code: "MC", name: "Monaco" },
+    { code: "MN", name: "Mongolia" },
+    { code: "ME", name: "Montenegro" },
+    { code: "MA", name: "Morocco" },
+    { code: "MZ", name: "Mozambique" },
+    { code: "MM", name: "Myanmar" },
+    { code: "NA", name: "Namibia" },
+    { code: "NP", name: "Nepal" },
+    { code: "NL", name: "Netherlands" },
+    { code: "NZ", name: "New Zealand" },
+    { code: "NI", name: "Nicaragua" },
+    { code: "NE", name: "Niger" },
+    { code: "NG", name: "Nigeria" },
+    { code: "MK", name: "North Macedonia" },
+    { code: "NO", name: "Norway" },
+    { code: "OM", name: "Oman" },
+    { code: "PK", name: "Pakistan" },
+    { code: "PA", name: "Panama" },
+    { code: "PG", name: "Papua New Guinea" },
+    { code: "PY", name: "Paraguay" },
+    { code: "PE", name: "Peru" },
+    { code: "PH", name: "Philippines" },
+    { code: "PL", name: "Poland" },
+    { code: "PT", name: "Portugal" },
+    { code: "PR", name: "Puerto Rico" },
+    { code: "QA", name: "Qatar" },
+    { code: "RO", name: "Romania" },
+    { code: "RU", name: "Russia" },
+    { code: "RW", name: "Rwanda" },
+    { code: "KN", name: "Saint Kitts and Nevis" },
+    { code: "LC", name: "Saint Lucia" },
+    { code: "VC", name: "Saint Vincent and the Grenadines" },
+    { code: "WS", name: "Samoa" },
+    { code: "SM", name: "San Marino" },
+    { code: "SA", name: "Saudi Arabia" },
+    { code: "SN", name: "Senegal" },
+    { code: "RS", name: "Serbia" },
+    { code: "SC", name: "Seychelles" },
+    { code: "SL", name: "Sierra Leone" },
+    { code: "SG", name: "Singapore" },
+    { code: "SK", name: "Slovakia" },
+    { code: "SI", name: "Slovenia" },
+    { code: "SB", name: "Solomon Islands" },
+    { code: "SO", name: "Somalia" },
+    { code: "ZA", name: "South Africa" },
+    { code: "KR", name: "South Korea" },
+    { code: "SS", name: "South Sudan" },
+    { code: "ES", name: "Spain" },
+    { code: "LK", name: "Sri Lanka" },
+    { code: "SD", name: "Sudan" },
+    { code: "SR", name: "Suriname" },
+    { code: "SE", name: "Sweden" },
+    { code: "CH", name: "Switzerland" },
+    { code: "SY", name: "Syria" },
+    { code: "TW", name: "Taiwan (China)" },
+    { code: "TJ", name: "Tajikistan" },
+    { code: "TZ", name: "Tanzania" },
+    { code: "TH", name: "Thailand" },
+    { code: "TL", name: "Timor-Leste" },
+    { code: "TG", name: "Togo" },
+    { code: "TO", name: "Tonga" },
+    { code: "TT", name: "Trinidad and Tobago" },
+    { code: "TN", name: "Tunisia" },
+    { code: "TR", name: "Turkey" },
+    { code: "TM", name: "Turkmenistan" },
+    { code: "AE", name: "UAE" },
+    { code: "UG", name: "Uganda" },
+    { code: "UA", name: "Ukraine" },
+    { code: "GB", name: "United Kingdom" },
+    { code: "US", name: "United States" },
+    { code: "UY", name: "Uruguay" },
+    { code: "UZ", name: "Uzbekistan" },
+    { code: "VU", name: "Vanuatu" },
+    { code: "VA", name: "Vatican City" },
+    { code: "VE", name: "Venezuela" },
+    { code: "VN", name: "Vietnam" },
+    { code: "YE", name: "Yemen" },
+    { code: "ZM", name: "Zambia" },
+    { code: "ZW", name: "Zimbabwe" }
+  ];
+
+  function buildCountryOptions() {
+    var select = document.getElementById("country");
+    COUNTRIES.forEach(function (c) {
+      var opt = document.createElement("option");
+      opt.value = c.name; opt.textContent = c.name;
+      select.appendChild(opt);
+    });
+  }
+  buildCountryOptions();
+
+  // Auto-detect country from the edge (Cloudflare Pages Function). Silently
+  // no-ops if /api/geo isn't available yet (e.g. opening this file locally
+  // via file:// before the site is deployed) — the field just stays manual.
+  (function detectCountry() {
+    var hint = document.getElementById("geo-hint");
+    fetch("/api/geo").then(function (r) {
+      if (!r.ok) throw new Error("geo lookup failed");
+      return r.json();
+    }).then(function (data) {
+      var match = data && data.country
+        ? COUNTRIES.find(function (c) { return c.code === data.country; })
+        : null;
+      var select = document.getElementById("country");
+      if (match) {
+        select.value = match.name;
+        hint.textContent = "Detected as " + match.name + " from your connection — change it if that's wrong.";
+      } else {
+        hint.textContent = "Couldn't detect your country automatically — please select it.";
+      }
+    }).catch(function () {
+      hint.textContent = "";
+    });
+  })();
+
+  document.getElementById("rfq-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var form = e.target;
+    var btn = document.getElementById("submit-btn");
+    var status = document.getElementById("form-status");
+
+    var payload = {
+      firstName: form.firstName.value.trim(),
+      lastName: form.lastName.value.trim(),
+      company: form.company.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      country: form.country.value,
+      notes: form.notes.value.trim()
+    };
+
+    if (!payload.firstName || !payload.lastName || !payload.company || !payload.email || !payload.notes) {
+      status.hidden = false;
+      status.className = "form-status error";
+      status.textContent = "Please fill in all required fields.";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    status.hidden = true;
+
+    fetch("/api/submit-rfq", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      if (!r.ok) throw new Error("submit failed");
+      return r.json();
+    }).then(function () {
+      status.hidden = false;
+      status.className = "form-status success";
+      status.textContent = "Thank you — we've received your inquiry and will reply within 24 hours.";
+      form.reset();
+    }).catch(function () {
+      status.hidden = false;
+      status.className = "form-status error";
+      status.textContent = "Something went wrong sending this. Please try WhatsApp or email instead.";
+    }).finally(function () {
+      btn.disabled = false;
+      btn.textContent = "Send Inquiry";
+    });
+  });
+</script>
+</body>
+</html>

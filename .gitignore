@@ -1,0 +1,11 @@
+# Working/source materials — not loaded by the live site, kept local only.
+网站产品图片/
+网站装柜图片/
+团队头像/
+细节修改建议/
+公司LOGO.png
+公司基本信息.txt
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
