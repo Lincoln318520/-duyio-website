@@ -11,6 +11,14 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    // Bare-domain visitors get sent to the canonical www host. Handled here
+    // in code (not a Cloudflare Redirect Rule) because the rule wasn't
+    // firing reliably for this zone — this path is directly testable.
+    if (url.hostname === "duyio.com") {
+      url.hostname = "www.duyio.com";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/api/geo" && request.method === "GET") {
       return geoHandler({ request, env, ctx });
     }
