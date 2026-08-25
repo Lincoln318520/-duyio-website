@@ -3,9 +3,14 @@
 网站装柜图片/
 团队头像/
 细节修改建议/
+Github and cloudflare 图片/
 公司LOGO.png
 公司基本信息.txt
 
 # OS / editor cruft
 .DS_Store
 Thumbs.db
+
+# Node / wrangler tooling — not needed in the deployed site
+node_modules/
+.wrangler/

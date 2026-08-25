@@ -1,0 +1,19 @@
+node_modules
+.git
+.wrangler
+.gitignore
+.assetsignore
+wrangler.jsonc
+worker.js
+package.json
+package-lock.json
+functions
+
+# Internal working materials — never meant to be publicly served
+网站产品图片
+网站装柜图片
+团队头像
+细节修改建议
+Github and cloudflare 图片
+公司LOGO.png
+公司基本信息.txt
