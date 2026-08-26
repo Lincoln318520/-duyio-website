@@ -11,10 +11,16 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    // Bare-domain visitors get sent to the canonical www host. Handled here
-    // in code (not a Cloudflare Redirect Rule) because the rule wasn't
-    // firing reliably for this zone — this path is directly testable.
-    if (url.hostname === "duyio.com") {
+    // Every legacy/bare hostname gets sent to the canonical www.duyio.com
+    // host. Handled here in code (not a Cloudflare Redirect Rule) because
+    // the rule wasn't firing reliably for this zone — this path is directly
+    // testable end to end.
+    const LEGACY_HOSTS = new Set([
+      "duyio.com",
+      "duoyinfo.com",
+      "www.duoyinfo.com"
+    ]);
+    if (LEGACY_HOSTS.has(url.hostname)) {
       url.hostname = "www.duyio.com";
       return Response.redirect(url.toString(), 301);
     }
