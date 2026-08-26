@@ -104,6 +104,9 @@ export async function onRequestPost(context) {
   const phone = (body.phone || "").trim();
   const country = (body.country || "").trim();
   const notes = (body.notes || "").trim();
+  const product = (body.product || "").trim();
+  const productSku = (body.productSku || "").trim();
+  const productUrl = (body.productUrl || "").trim();
 
   if (!firstName || !lastName || !company || !email || !notes) {
     return jsonResponse({ error: "Missing required fields" }, 400);
@@ -118,6 +121,12 @@ export async function onRequestPost(context) {
     "",
     `Source: website RFQ form, submitted ${submittedAt}`
   ];
+  if (product) {
+    otherInfoLines.push(`Product inquired: ${product}${productSku ? " (#" + productSku + ")" : ""}`);
+    if (productUrl) otherInfoLines.push(`Product page: ${productUrl}`);
+  } else {
+    otherInfoLines.push("Product inquired: (general inquiry, not sent from a product page)");
+  }
 
   const fields = {
     "客户名字": firstName,

@@ -37,6 +37,7 @@
         <p class="eyebrow">Request a Quote</p>
         <h1 style="font-size: clamp(2.1rem, 2.6vw + 1rem, 3rem); margin-top: 0.7rem;">Tell us what you want to design.</h1>
         <p>A few details on who you are and what you're looking for — we typically reply within 24 hours with next steps or a follow-up question.</p>
+        <p id="product-context" class="field-hint" hidden style="margin-top: 0.9rem; font-size: 0.92rem;"></p>
       </div>
 
       <div class="form-shell">
@@ -352,6 +353,25 @@
     });
   })();
 
+  // Product pages link here with ?product=...&sku=...&src=... so an
+  // inquiry can be traced back to the exact page it came from — otherwise
+  // every RFQ lands in the CRM with no way to tell which design the buyer
+  // actually meant.
+  var productContext = (function () {
+    var params = new URLSearchParams(window.location.search);
+    var product = params.get("product");
+    var sku = params.get("sku");
+    var src = params.get("src");
+    if (!product) return null;
+    var productUrl = src
+      ? window.location.origin + "/products/phone-cases/" + src + "/"
+      : "";
+    var el = document.getElementById("product-context");
+    el.hidden = false;
+    el.textContent = "Inquiring about: " + product + (sku ? " (#" + sku + ")" : "");
+    return { product: product, sku: sku || "", productUrl: productUrl };
+  })();
+
   document.getElementById("rfq-form").addEventListener("submit", function (e) {
     e.preventDefault();
     var form = e.target;
@@ -365,7 +385,10 @@
       email: form.email.value.trim(),
       phone: form.phone.value.trim(),
       country: form.country.value,
-      notes: form.notes.value.trim()
+      notes: form.notes.value.trim(),
+      product: productContext ? productContext.product : "",
+      productSku: productContext ? productContext.sku : "",
+      productUrl: productContext ? productContext.productUrl : ""
     };
 
     if (!payload.firstName || !payload.lastName || !payload.company || !payload.email || !payload.notes) {
