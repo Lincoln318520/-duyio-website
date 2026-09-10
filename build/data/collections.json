@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "argentina",
+    "name": "Argentina Culture",
+    "kind": "country",
+    "order": 10,
+    "eyebrow": "Collection · Culture",
+    "blurb": "Football, flag and everyday ritual — Argentina's most recognisable symbols, cast into cases a buyer's customers wear because they mean something, not just because of the colour.",
+    "intro": "Every piece in this collection starts from one Argentine reference — a number, an emblem, a shared cup of mate — and renders it in dimensional resin rather than a flat print. Built for football-culture retail, fan merchandise and Latin American gift shops that want real specificity."
+  },
+  {
+    "slug": "mexico",
+    "name": "Mexico Culture",
+    "kind": "country",
+    "order": 20,
+    "eyebrow": "Collection · Culture",
+    "blurb": "Aztec geometry, Maya glyphs, alebrije spirit-beasts and Oaxacan floral embroidery — Mexico's design heritage, engraved in relief into a biodegradable wheat-straw shell.",
+    "intro": "This collection is a single product line — a matte, biodegradable wheat-straw case — carrying four Mexican pattern stories. Each motif is a same-colour 3D relief pressed into the shell, not a print: it never fades or peels, and the surface reads as texture rather than decoration. Built for retailers and gift buyers serving Mexico and the wider Latin American market who want cultural depth with an eco material story."
+  },
+  {
+    "slug": "art-deco",
+    "name": "Art Deco Luxury",
+    "kind": "aesthetic",
+    "order": 40,
+    "eyebrow": "Collection · Aesthetic",
+    "blurb": "Machine-age geometry in slate blue and gold, hand-set with rhinestones — the studio's flagship luxury design.",
+    "intro": "One design, built on the defining visual language of 1920s Art Deco: layered fan-shaped arcs, symmetry and controlled ornament, cast in a clear protective shell with an electroplated camera frame."
+  },
+  {
+    "slug": "balletcore",
+    "name": "Balletcore & Vintage",
+    "kind": "aesthetic",
+    "order": 50,
+    "eyebrow": "Collection · Aesthetic",
+    "blurb": "Bows, pearls and lace in a soft pastel palette — expressive, gift-worthy design for an aesthetic-driven customer.",
+    "intro": "A recognisable balletcore / vintage-coquette look built from deliberate details — a printed-in-place bow, pearl relief, a fine lace motif — rather than one big pattern."
+  },
+  {
+    "slug": "floral",
+    "name": "Floral Story",
+    "kind": "aesthetic",
+    "order": 60,
+    "eyebrow": "Collection · Aesthetic",
+    "blurb": "Real pressed petals sealed in resin — romantic, nature-driven design with no flag or fandom attached.",
+    "intro": "Designs carried entirely by colour and material rather than a place: warm and cool blossoms, silver star flecks, and genuine dried petals sealed permanently into the resin layer."
+  }
+]

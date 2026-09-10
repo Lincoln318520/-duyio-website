@@ -1,0 +1,73 @@
+{
+  "name": "DUYIO",
+  "legalName": "Guangzhou Duoyinfo Technology Co., Ltd.",
+  "founded": "2018",
+  "founder": "Lincoln Lin",
+  "canonicalOrigin": "https://www.duyio.com",
+  "address": {
+    "street": "1922, Yuehai Plaza, Wanbo 2nd Road, Nancun Town, Panyu District",
+    "locality": "Guangzhou",
+    "region": "Guangdong",
+    "postalCode": "511400",
+    "country": "CN"
+  },
+  "contact": {
+    "whatsappNumber": "+86 185 2039 9195",
+    "whatsappUrl": "https://wa.me/8618520399195",
+    "email": "support@duyio.com",
+    "location": "Guangzhou, China"
+  },
+  "locales": ["en"],
+  "defaultLocale": "en",
+  "themeColor": "#16110f",
+  "trust": [
+    { "label": "Design", "value": "100% Original, In-House" },
+    { "label": "MOQ", "value": "200 pcs / design" },
+    { "label": "Lead Time", "value": "15–25 Days" }
+  ],
+  "hero": {
+    "eyebrow": "DUYIO · Guangzhou",
+    "headlineHtml": "Original designs, <i>cast</i> into every case.",
+    "lede": "Original, culture-inspired accessories and gifts — designed in-house, produced through a managed network of 500+ factories across China, never resold from someone else's mold.",
+    "image": "assets/products/art-deco/main.jpg",
+    "imageAlt": "Art Deco blue and gold rhinestone resin phone case on a marble table",
+    "tag": "Art Deco Luxury — #DYF2445"
+  },
+  "featuredSlugs": [
+    "aztec-geometry-biodegradable",
+    "argentina-sol-de-mayo-gold",
+    "mayan-glyphs-biodegradable",
+    "balletcore-bow-pearl"
+  ],
+  "process": {
+    "eyebrow": "How We Work",
+    "heading": "500+ factories. One studio running them.",
+    "intro": "We don't own a single factory — that's what lets us run the network instead of being limited by it. Every design is placed with whichever specialist in our 500+ factory network across China builds it best, matched by material and process rather than locked into one production line. We own the concept, the sample approval and the inspection; the network builds to our spec.",
+    "steps": [
+      { "num": "I.", "h": "Design", "p": "Original concept and artwork, developed in-house around one cultural or aesthetic idea." },
+      { "num": "II.", "h": "Sampling", "p": "A physical sample is produced by our production partner from the approved artwork." },
+      { "num": "III.", "h": "Team Review", "p": "Our own team inspects and signs off on every sample before it goes to bulk." },
+      { "num": "IV.", "h": "Managed Production", "p": "Bulk manufacturing runs through the right partner in our 500+ factory network, matched to this design's process." },
+      { "num": "V.", "h": "Pre-Shipment Check", "p": "Every order is inspected before it leaves the partner facility." }
+    ],
+    "note": "We run this way on purpose, not by default: owning zero factories means we're never limited to what one production line can run. A resin-casting specialist builds the phone cases; an electroplating shop handles metal frames; an embroidery house takes on textile pieces — we route each design to whichever factory in the network does that process best, then hold every one of them to the same sample and inspection standard."
+  },
+  "team": {
+    "eyebrow": "The Team",
+    "heading": "Seven people behind every piece.",
+    "intro": "A small team, each owning one part of the process from concept to delivery.",
+    "members": [
+      { "img": "assets/team/lincoln.png", "name": "Lincoln Lin", "role": "Founder & General Manager", "bio": "Sets the studio's design direction and leads partnerships with buyers worldwide." },
+      { "img": "assets/team/jolin.png", "name": "Jolin Qiu", "role": "Operations Manager", "bio": "Runs day-to-day production workflow; her background in premium leather-goods manufacturing shapes our materials standards." },
+      { "img": "assets/team/noemi.png", "name": "Noemi", "role": "Spanish Market Manager", "bio": "Handles every Spanish-speaking partnership — fitting, given how many of our designs draw on Latin American culture." },
+      { "img": "assets/team/alisa.png", "name": "Alisa", "role": "Order Fulfillment Manager", "bio": "Keeps every order moving on schedule, from confirmed sample to shipped carton." },
+      { "img": "assets/team/jane.png", "name": "Jane", "role": "Production Sourcing Manager", "bio": "Manages the partner network that turns our designs into finished pieces." },
+      { "img": "assets/team/smiling.png", "name": "Smiling", "role": "Merchandiser & Trend Curator", "bio": "Researches emerging aesthetics and feeds new design themes into the studio." },
+      { "img": "assets/team/harrison.png", "name": "Harrison Zhang", "role": "Quality Director", "bio": "Sets and enforces the inspection standard every design has to meet before it ships." }
+    ]
+  },
+  "finalCta": {
+    "heading": "Let's build something exclusive.",
+    "body": "Tell us the culture, occasion or story you want your next accessory to carry — we'll turn it into a sampled, ready-to-produce design."
+  }
+}
