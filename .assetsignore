@@ -8,6 +8,7 @@ worker.js
 package.json
 package-lock.json
 functions
+build
 
 # Internal working materials — never meant to be publicly served
 网站产品图片
