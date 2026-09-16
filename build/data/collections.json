@@ -5,6 +5,7 @@
     "market": { "en": "Argentina", "es": "Argentina" },
     "kind": "country",
     "order": 10,
+    "tileColumns": 2,
     "eyebrow": { "en": "Collection · Culture", "es": "Colección · Cultura" },
     "blurb": { "en": "Football, flag and everyday ritual — Argentina's most recognisable symbols, cast into cases a buyer's customers wear because they mean something, not just because of the colour.", "es": "Fútbol, bandera y rituales cotidianos — los símbolos más reconocibles de Argentina, plasmados en fundas que los clientes de un comprador usan porque significan algo, no solo por el color." },
     "intro": { "en": "Every piece in this collection starts from one Argentine reference — a number, an emblem, a shared cup of mate — and renders it in dimensional resin rather than a flat print. Built for football-culture retail, fan merchandise and Latin American gift shops that want real specificity.", "es": "Cada pieza de esta colección parte de una referencia argentina concreta — un número, un emblema, un mate compartido — y la plasma en resina tridimensional en lugar de una impresión plana. Pensada para tiendas de cultura futbolera, artículos de fanáticos y tiendas de regalos latinoamericanas que buscan algo realmente específico." }

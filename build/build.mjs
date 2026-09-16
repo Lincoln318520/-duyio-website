@@ -467,9 +467,22 @@ function renderCollection(c, locale) {
   const byMaterial = {};
   for (const p of items) (byMaterial[t(p.materialTag, locale)] ||= []).push(p);
   const materialGroups = Object.keys(byMaterial);
-  const groupBy = materialGroups.length > 1;
+  // Material grouping only earns its keep when it actually collapses several
+  // products under a shared material (e.g. Mexico's biodegradable vs.
+  // silicone lines). When every product has its own distinct materialTag
+  // (e.g. Argentina, where the tag is really a per-product flavor label),
+  // grouping produces one product per "group" instead of a real grid — a
+  // collection can opt out entirely via `tileColumns`, which also pins the
+  // column count instead of deriving it from the item count.
+  const groupBy = !c.tileColumns && materialGroups.length > 1 && materialGroups.length < items.length;
 
-  const gridClass = items.length >= 4 ? "grid-4" : items.length === 3 ? "grid-3" : "grid-2";
+  const gridClass = c.tileColumns
+    ? `grid-${c.tileColumns}`
+    : items.length >= 4
+    ? "grid-4"
+    : items.length === 3
+    ? "grid-3"
+    : "grid-2";
 
   const tile = (p) => {
     const pname = t(p.name, locale);
