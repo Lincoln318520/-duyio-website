@@ -15,23 +15,27 @@
     "whatsappNumber": "+86 185 2039 9195",
     "whatsappUrl": "https://wa.me/8618520399195",
     "email": "support@duyio.com",
-    "location": "Guangzhou, China"
+    "location": { "en": "Guangzhou, China", "es": "Guangzhou, China" }
   },
-  "locales": ["en"],
+  "locales": ["en", "es"],
   "defaultLocale": "en",
   "themeColor": "#16110f",
+  "seo": {
+    "homeTitle": { "en": "DUYIO — Original Design, Managed Production for Accessories & Gifts", "es": "DUYIO — Diseño Original, Producción Gestionada de Accesorios y Regalos" },
+    "homeDescription": { "en": "DUYIO designs original, culture-inspired accessories and gifts in Guangzhou and manages production through a 500+ factory network across China — from concept to finished order.", "es": "DUYIO diseña accesorios y regalos originales, inspirados en la cultura, en Guangzhou, y gestiona la producción a través de una red de más de 500 fábricas en toda China — desde el concepto hasta el pedido terminado." }
+  },
   "trust": [
-    { "label": "Design", "value": "100% Original, In-House" },
-    { "label": "MOQ", "value": "200 pcs / design" },
-    { "label": "Lead Time", "value": "15–25 Days" }
+    { "label": { "en": "Design", "es": "Diseño" }, "value": { "en": "100% Original, In-House", "es": "100% Original, Interno" } },
+    { "label": { "en": "MOQ", "es": "MOQ" }, "value": { "en": "200 pcs / design", "es": "200 uds / diseño" } },
+    { "label": { "en": "Lead Time", "es": "Plazo de Entrega" }, "value": { "en": "15–25 Days", "es": "15–25 días" } }
   ],
   "hero": {
-    "eyebrow": "DUYIO · Guangzhou",
-    "headlineHtml": "Original designs, <i>cast</i> into every case.",
-    "lede": "Original, culture-inspired accessories and gifts — designed in-house, produced through a managed network of 500+ factories across China, never resold from someone else's mold.",
+    "eyebrow": { "en": "DUYIO · Guangzhou", "es": "DUYIO · Guangzhou" },
+    "headlineHtml": { "en": "Original designs, <i>cast</i> into every case.", "es": "Diseños originales, <i>plasmados</i> en cada funda." },
+    "lede": { "en": "Original, culture-inspired accessories and gifts — designed in-house, produced through a managed network of 500+ factories across China, never resold from someone else's mold.", "es": "Accesorios y regalos originales, inspirados en la cultura — diseñados internamente, fabricados a través de una red gestionada de más de 500 fábricas en toda China, nunca revendidos a partir del molde de otra marca." },
     "image": "assets/products/art-deco/main.jpg",
-    "imageAlt": "Art Deco blue and gold rhinestone resin phone case on a marble table",
-    "tag": "Art Deco Luxury — #DYF2445"
+    "imageAlt": { "en": "Art Deco blue and gold rhinestone resin phone case on a marble table", "es": "Funda de resina Art Déco azul y dorado con pedrería sobre una mesa de mármol" },
+    "tag": { "en": "Art Deco Luxury — #DYF2445", "es": "Art Déco de Lujo — #DYF2445" }
   },
   "featuredSlugs": [
     "catrina-calavera-silicone",
@@ -40,34 +44,78 @@
     "balletcore-bow-pearl"
   ],
   "process": {
-    "eyebrow": "How We Work",
-    "heading": "500+ factories. One studio running them.",
-    "intro": "We don't own a single factory — that's what lets us run the network instead of being limited by it. Every design is placed with whichever specialist in our 500+ factory network across China builds it best, matched by material and process rather than locked into one production line. We own the concept, the sample approval and the inspection; the network builds to our spec.",
+    "eyebrow": { "en": "How We Work", "es": "Cómo Trabajamos" },
+    "heading": { "en": "500+ factories. One studio running them.", "es": "Más de 500 fábricas. Un solo estudio que las coordina." },
+    "intro": { "en": "We don't own a single factory — that's what lets us run the network instead of being limited by it. Every design is placed with whichever specialist in our 500+ factory network across China builds it best, matched by material and process rather than locked into one production line. We own the concept, the sample approval and the inspection; the network builds to our spec.", "es": "No somos dueños de ninguna fábrica — eso es precisamente lo que nos permite dirigir la red en lugar de estar limitados por ella. Cada diseño se asigna al especialista que mejor lo fabrica dentro de nuestra red de más de 500 fábricas en toda China, según el material y el proceso, en lugar de depender de una sola línea de producción. Nosotros controlamos el concepto, la aprobación de muestras y la inspección; la red fabrica según nuestras especificaciones." },
     "steps": [
-      { "num": "I.", "h": "Design", "p": "Original concept and artwork, developed in-house around one cultural or aesthetic idea." },
-      { "num": "II.", "h": "Sampling", "p": "A physical sample is produced by our production partner from the approved artwork." },
-      { "num": "III.", "h": "Team Review", "p": "Our own team inspects and signs off on every sample before it goes to bulk." },
-      { "num": "IV.", "h": "Managed Production", "p": "Bulk manufacturing runs through the right partner in our 500+ factory network, matched to this design's process." },
-      { "num": "V.", "h": "Pre-Shipment Check", "p": "Every order is inspected before it leaves the partner facility." }
+      { "num": "I.", "h": { "en": "Design", "es": "Diseño" }, "p": { "en": "Original concept and artwork, developed in-house around one cultural or aesthetic idea.", "es": "Concepto y arte original, desarrollados internamente en torno a una idea cultural o estética." } },
+      { "num": "II.", "h": { "en": "Sampling", "es": "Muestreo" }, "p": { "en": "A physical sample is produced by our production partner from the approved artwork.", "es": "Nuestro socio de producción fabrica una muestra física a partir del arte aprobado." } },
+      { "num": "III.", "h": { "en": "Team Review", "es": "Revisión del Equipo" }, "p": { "en": "Our own team inspects and signs off on every sample before it goes to bulk.", "es": "Nuestro propio equipo inspecciona y aprueba cada muestra antes de pasar a producción en volumen." } },
+      { "num": "IV.", "h": { "en": "Managed Production", "es": "Producción Gestionada" }, "p": { "en": "Bulk manufacturing runs through the right partner in our 500+ factory network, matched to this design's process.", "es": "La fabricación en volumen se realiza con el socio adecuado dentro de nuestra red de más de 500 fábricas, según el proceso que exige cada diseño." } },
+      { "num": "V.", "h": { "en": "Pre-Shipment Check", "es": "Inspección Previa al Envío" }, "p": { "en": "Every order is inspected before it leaves the partner facility.", "es": "Cada pedido se inspecciona antes de salir de la planta del socio." } }
     ],
-    "note": "We run this way on purpose, not by default: owning zero factories means we're never limited to what one production line can run. A resin-casting specialist builds the phone cases; an electroplating shop handles metal frames; an embroidery house takes on textile pieces — we route each design to whichever factory in the network does that process best, then hold every one of them to the same sample and inspection standard."
+    "note": { "en": "We run this way on purpose, not by default: owning zero factories means we're never limited to what one production line can run. A resin-casting specialist builds the phone cases; an electroplating shop handles metal frames; an embroidery house takes on textile pieces — we route each design to whichever factory in the network does that process best, then hold every one of them to the same sample and inspection standard.", "es": "Trabajamos así de forma intencional, no por defecto: no ser dueños de ninguna fábrica significa que nunca estamos limitados a lo que una sola línea de producción puede hacer. Un especialista en fundido de resina fabrica las fundas; un taller de galvanoplastia se encarga de los marcos metálicos; un taller de bordado se encarga de las piezas textiles — dirigimos cada diseño a la fábrica de la red que mejor domina ese proceso, y exigimos a todas ellas el mismo estándar de muestra e inspección." }
   },
   "team": {
-    "eyebrow": "The Team",
-    "heading": "Seven people behind every piece.",
-    "intro": "A small team, each owning one part of the process from concept to delivery.",
+    "eyebrow": { "en": "The Team", "es": "El Equipo" },
+    "heading": { "en": "Seven people behind every piece.", "es": "Siete personas detrás de cada pieza." },
+    "intro": { "en": "A small team, each owning one part of the process from concept to delivery.", "es": "Un equipo pequeño, cada persona a cargo de una parte del proceso, desde el concepto hasta la entrega." },
     "members": [
-      { "img": "assets/team/lincoln.png", "name": "Lincoln Lin", "role": "Founder & General Manager", "bio": "Sets the studio's design direction and leads partnerships with buyers worldwide." },
-      { "img": "assets/team/jolin.png", "name": "Jolin Qiu", "role": "Operations Manager", "bio": "Runs day-to-day production workflow; her background in premium leather-goods manufacturing shapes our materials standards." },
-      { "img": "assets/team/noemi.png", "name": "Noemi", "role": "Spanish Market Manager", "bio": "Handles every Spanish-speaking partnership — fitting, given how many of our designs draw on Latin American culture." },
-      { "img": "assets/team/alisa.png", "name": "Alisa", "role": "Order Fulfillment Manager", "bio": "Keeps every order moving on schedule, from confirmed sample to shipped carton." },
-      { "img": "assets/team/jane.png", "name": "Jane", "role": "Production Sourcing Manager", "bio": "Manages the partner network that turns our designs into finished pieces." },
-      { "img": "assets/team/smiling.png", "name": "Smiling", "role": "Merchandiser & Trend Curator", "bio": "Researches emerging aesthetics and feeds new design themes into the studio." },
-      { "img": "assets/team/harrison.png", "name": "Harrison Zhang", "role": "Quality Director", "bio": "Sets and enforces the inspection standard every design has to meet before it ships." }
+      { "img": "assets/team/lincoln.png", "name": "Lincoln Lin", "role": { "en": "Founder & General Manager", "es": "Fundador y Director General" }, "bio": { "en": "Sets the studio's design direction and leads partnerships with buyers worldwide.", "es": "Define la dirección de diseño del estudio y lidera las alianzas con compradores de todo el mundo." } },
+      { "img": "assets/team/jolin.png", "name": "Jolin Qiu", "role": { "en": "Operations Manager", "es": "Gerente de Operaciones" }, "bio": { "en": "Runs day-to-day production workflow; her background in premium leather-goods manufacturing shapes our materials standards.", "es": "Dirige el flujo de producción diario; su experiencia en manufactura de artículos de cuero premium define nuestros estándares de materiales." } },
+      { "img": "assets/team/noemi.png", "name": "Noemi", "role": { "en": "Spanish Market Manager", "es": "Gerente del Mercado Hispanohablante" }, "bio": { "en": "Handles every Spanish-speaking partnership — fitting, given how many of our designs draw on Latin American culture.", "es": "Gestiona todas las alianzas con clientes de habla hispana — algo natural, dado que muchos de nuestros diseños se inspiran en la cultura latinoamericana." } },
+      { "img": "assets/team/alisa.png", "name": "Alisa", "role": { "en": "Order Fulfillment Manager", "es": "Gerente de Cumplimiento de Pedidos" }, "bio": { "en": "Keeps every order moving on schedule, from confirmed sample to shipped carton.", "es": "Mantiene cada pedido en marcha según el calendario, desde la muestra confirmada hasta la caja enviada." } },
+      { "img": "assets/team/jane.png", "name": "Jane", "role": { "en": "Production Sourcing Manager", "es": "Gerente de Abastecimiento de Producción" }, "bio": { "en": "Manages the partner network that turns our designs into finished pieces.", "es": "Gestiona la red de socios que convierte nuestros diseños en piezas terminadas." } },
+      { "img": "assets/team/smiling.png", "name": "Smiling", "role": { "en": "Merchandiser & Trend Curator", "es": "Comerciante y Curadora de Tendencias" }, "bio": { "en": "Researches emerging aesthetics and feeds new design themes into the studio.", "es": "Investiga estéticas emergentes y aporta nuevos temas de diseño al estudio." } },
+      { "img": "assets/team/harrison.png", "name": "Harrison Zhang", "role": { "en": "Quality Director", "es": "Director de Calidad" }, "bio": { "en": "Sets and enforces the inspection standard every design has to meet before it ships.", "es": "Establece y hace cumplir el estándar de inspección que todo diseño debe cumplir antes de enviarse." } }
     ]
   },
   "finalCta": {
-    "heading": "Let's build something exclusive.",
-    "body": "Tell us the culture, occasion or story you want your next accessory to carry — we'll turn it into a sampled, ready-to-produce design."
+    "heading": { "en": "Let's build something exclusive.", "es": "Creemos algo exclusivo." },
+    "body": { "en": "Tell us the culture, occasion or story you want your next accessory to carry — we'll turn it into a sampled, ready-to-produce design.", "es": "Cuéntanos la cultura, ocasión o historia que quieres que lleve tu próximo accesorio — la convertiremos en un diseño muestreado y listo para producir." }
+  },
+  "ui": {
+    "navCollections": { "en": "Collections", "es": "Colecciones" },
+    "navQuality": { "en": "Design & Quality", "es": "Diseño y Calidad" },
+    "navAbout": { "en": "About", "es": "Nosotros" },
+    "navContact": { "en": "Contact", "es": "Contacto" },
+    "navRequestQuote": { "en": "Request Quote", "es": "Pedir Cotización" },
+    "home": { "en": "Home", "es": "Inicio" },
+    "messageWhatsapp": { "en": "Message on WhatsApp", "es": "Escríbenos por WhatsApp" },
+    "requestAQuote": { "en": "Request a Quote", "es": "Solicitar una Cotización" },
+    "askWhatsapp": { "en": "Ask on WhatsApp", "es": "Preguntar por WhatsApp" },
+    "exploreCollections": { "en": "Explore Collections →", "es": "Explorar Colecciones →" },
+    "exploreByCulture": { "en": "Explore by Culture", "es": "Explora por Cultura" },
+    "pickAStory": { "en": "Pick a story, then a design.", "es": "Elige una historia, luego un diseño." },
+    "collectionsIntro": { "en": "Every collection is built around one culture or one aesthetic idea — not a warehouse of unrelated SKUs. Start with the market you sell into.", "es": "Cada colección se construye en torno a una cultura o una idea estética — no es un almacén de productos sin relación entre sí. Empieza por el mercado al que vendes." },
+    "featured": { "en": "Featured", "es": "Destacados" },
+    "aFewToStart": { "en": "A few to start with.", "es": "Algunos para empezar." },
+    "allCollections": { "en": "All Collections", "es": "Todas las Colecciones" },
+    "modelNo": { "en": "Model No.", "es": "N.º de Modelo" },
+    "moq": { "en": "MOQ", "es": "MOQ" },
+    "material": { "en": "Material", "es": "Material" },
+    "leadTime": { "en": "Lead Time", "es": "Plazo de Entrega" },
+    "theDesign": { "en": "The Design", "es": "El Diseño" },
+    "craftStructure": { "en": "Craft & Structure", "es": "Artesanía y Estructura" },
+    "keyFeatures": { "en": "Key Features", "es": "Características Clave" },
+    "threeDetails": { "en": "Three details that carry the design.", "es": "Tres detalles que dan vida al diseño." },
+    "compatibility": { "en": "Compatibility", "es": "Compatibilidad" },
+    "wantThisDesign": { "en": "Want this design, or something like it?", "es": "¿Te interesa este diseño, o algo parecido?" },
+    "buildingForMarket": { "en": "Building for the {market} market?", "es": "¿Vendes en el mercado de {market}?" },
+    "tellUsModels": { "en": "Tell us your target models, quantities and timeline — we'll confirm pricing and get a sample moving.", "es": "Cuéntanos los modelos, cantidades y plazos que necesitas — confirmaremos el precio y pondremos una muestra en marcha." },
+    "moreCollection": { "en": "More {collection}", "es": "Más de {collection}" },
+    "founded": { "en": "Founded", "es": "Fundada en" },
+    "fobPrice": { "en": "FOB Price (USD)", "es": "Precio FOB (USD)" },
+    "fromPricePerPc": { "en": "From ${price} / pc", "es": "Desde ${price} / ud" },
+    "priceNote": { "en": "at MOQ — final price depends on order quantity and customization", "es": "al MOQ — el precio final depende de la cantidad del pedido y la personalización" },
+    "mainProductShot": { "en": "main product shot", "es": "foto principal del producto" },
+    "shownFittedToPhone": { "en": "shown fitted to a phone", "es": "mostrado colocado en un teléfono" },
+    "cultureInspiredCases": { "en": "Culture-Inspired Phone Cases", "es": "Fundas de Teléfono Inspiradas en la Cultura" },
+    "ariaPrimary": { "en": "Primary", "es": "Principal" },
+    "ariaFooter": { "en": "Footer", "es": "Pie de página" },
+    "ariaBreadcrumb": { "en": "Breadcrumb", "es": "Ruta de navegación" },
+    "duyioHome": { "en": "DUYIO home", "es": "Inicio de DUYIO" },
+    "langSwitch": { "en": "ES", "es": "EN" },
+    "productWord": { "en": "product", "es": "producto" }
   }
 }

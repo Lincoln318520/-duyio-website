@@ -1,47 +1,49 @@
 [
   {
     "slug": "argentina",
-    "name": "Argentina Culture",
+    "name": { "en": "Argentina Culture", "es": "Cultura Argentina" },
+    "market": { "en": "Argentina", "es": "Argentina" },
     "kind": "country",
     "order": 10,
-    "eyebrow": "Collection · Culture",
-    "blurb": "Football, flag and everyday ritual — Argentina's most recognisable symbols, cast into cases a buyer's customers wear because they mean something, not just because of the colour.",
-    "intro": "Every piece in this collection starts from one Argentine reference — a number, an emblem, a shared cup of mate — and renders it in dimensional resin rather than a flat print. Built for football-culture retail, fan merchandise and Latin American gift shops that want real specificity."
+    "eyebrow": { "en": "Collection · Culture", "es": "Colección · Cultura" },
+    "blurb": { "en": "Football, flag and everyday ritual — Argentina's most recognisable symbols, cast into cases a buyer's customers wear because they mean something, not just because of the colour.", "es": "Fútbol, bandera y rituales cotidianos — los símbolos más reconocibles de Argentina, plasmados en fundas que los clientes de un comprador usan porque significan algo, no solo por el color." },
+    "intro": { "en": "Every piece in this collection starts from one Argentine reference — a number, an emblem, a shared cup of mate — and renders it in dimensional resin rather than a flat print. Built for football-culture retail, fan merchandise and Latin American gift shops that want real specificity.", "es": "Cada pieza de esta colección parte de una referencia argentina concreta — un número, un emblema, un mate compartido — y la plasma en resina tridimensional en lugar de una impresión plana. Pensada para tiendas de cultura futbolera, artículos de fanáticos y tiendas de regalos latinoamericanas que buscan algo realmente específico." }
   },
   {
     "slug": "mexico",
-    "name": "Mexico Culture",
+    "name": { "en": "Mexico Culture", "es": "Cultura Mexicana" },
+    "market": { "en": "Mexico", "es": "México" },
     "kind": "country",
     "order": 20,
-    "eyebrow": "Collection · Culture",
-    "blurb": "Aztec geometry, Maya glyphs, Catrina calaveras and more — Mexico's design heritage, laser-engraved across two shell materials: a biodegradable wheat-straw case and a fleece-lined liquid silicone case.",
-    "intro": "This collection spans two product lines carrying eighteen Mexican pattern stories. Four motifs live on a matte, biodegradable wheat-straw shell as a same-colour 3D relief; fourteen more — spanning Día de los Muertos icons, craft traditions, wrestling culture and Mesoamerican mythology — live on a soft-touch, fleece-lined liquid silicone shell as a same-colour laser-engraved, flush-smooth finish. Neither is a print: both hold their pattern as texture, not ink. Built for retailers and gift buyers serving Mexico and the wider Latin American market who want cultural depth across more than one material story."
+    "eyebrow": { "en": "Collection · Culture", "es": "Colección · Cultura" },
+    "blurb": { "en": "Aztec geometry, Maya glyphs, Catrina calaveras and more — Mexico's design heritage, laser-engraved across two shell materials: a biodegradable wheat-straw case and a fleece-lined liquid silicone case.", "es": "Geometría azteca, glifos mayas, calaveras Catrina y más — el patrimonio de diseño de México, grabado con láser en dos materiales de funda: una funda biodegradable de paja de trigo y una funda de silicona líquida forrada en felpa." },
+    "intro": { "en": "This collection spans two product lines carrying eighteen Mexican pattern stories. Four motifs live on a matte, biodegradable wheat-straw shell as a same-colour 3D relief; fourteen more — spanning Día de los Muertos icons, craft traditions, wrestling culture and Mesoamerican mythology — live on a soft-touch, fleece-lined liquid silicone shell as a same-colour laser-engraved, flush-smooth finish. Neither is a print: both hold their pattern as texture, not ink. Built for retailers and gift buyers serving Mexico and the wider Latin American market who want cultural depth across more than one material story.", "es": "Esta colección abarca dos líneas de producto que llevan dieciocho historias de patrones mexicanos. Cuatro motivos viven en una funda mate y biodegradable de paja de trigo, en relieve 3D del mismo color; otros catorce —que abarcan íconos del Día de los Muertos, tradiciones artesanales, la cultura de la lucha libre y la mitología mesoamericana— viven en una funda de silicona líquida forrada en felpa, con un grabado láser del mismo color y acabado totalmente liso. Ninguno de los dos es una impresión: en ambos casos el patrón es una textura, no tinta. Pensada para minoristas y compradores de regalos que atienden a México y al resto del mercado latinoamericano, y que buscan profundidad cultural en más de un tipo de material." }
   },
   {
     "slug": "art-deco",
-    "name": "Art Deco Luxury",
+    "name": { "en": "Art Deco Luxury", "es": "Art Déco de Lujo" },
     "kind": "aesthetic",
     "order": 40,
-    "eyebrow": "Collection · Aesthetic",
-    "blurb": "Machine-age geometry in slate blue and gold, hand-set with rhinestones — the studio's flagship luxury design.",
-    "intro": "One design, built on the defining visual language of 1920s Art Deco: layered fan-shaped arcs, symmetry and controlled ornament, cast in a clear protective shell with an electroplated camera frame."
+    "eyebrow": { "en": "Collection · Aesthetic", "es": "Colección · Estética" },
+    "blurb": { "en": "Machine-age geometry in slate blue and gold, hand-set with rhinestones — the studio's flagship luxury design.", "es": "Geometría de la era de la máquina en azul pizarra y dorado, con pedrería colocada a mano — el diseño de lujo insignia del estudio." },
+    "intro": { "en": "One design, built on the defining visual language of 1920s Art Deco: layered fan-shaped arcs, symmetry and controlled ornament, cast in a clear protective shell with an electroplated camera frame.", "es": "Un solo diseño, construido sobre el lenguaje visual característico del Art Déco de los años 1920: arcos en abanico superpuestos, simetría y ornamento controlado, moldeado en una funda protectora transparente con un marco de cámara galvanizado." }
   },
   {
     "slug": "balletcore",
-    "name": "Balletcore & Vintage",
+    "name": { "en": "Balletcore & Vintage", "es": "Balletcore y Vintage" },
     "kind": "aesthetic",
     "order": 50,
-    "eyebrow": "Collection · Aesthetic",
-    "blurb": "Bows, pearls and lace in a soft pastel palette — expressive, gift-worthy design for an aesthetic-driven customer.",
-    "intro": "A recognisable balletcore / vintage-coquette look built from deliberate details — a printed-in-place bow, pearl relief, a fine lace motif — rather than one big pattern."
+    "eyebrow": { "en": "Collection · Aesthetic", "es": "Colección · Estética" },
+    "blurb": { "en": "Bows, pearls and lace in a soft pastel palette — expressive, gift-worthy design for an aesthetic-driven customer.", "es": "Lazos, perlas y encaje en una suave paleta pastel — un diseño expresivo, ideal para regalo, pensado para una clienta guiada por la estética." },
+    "intro": { "en": "A recognisable balletcore / vintage-coquette look built from deliberate details — a printed-in-place bow, pearl relief, a fine lace motif — rather than one big pattern.", "es": "Un estilo balletcore / vintage-coquette reconocible, construido a partir de detalles deliberados —un lazo impreso en el propio material, relieve de perlas, un fino motivo de encaje— en lugar de un solo patrón grande." }
   },
   {
     "slug": "floral",
-    "name": "Floral Story",
+    "name": { "en": "Floral Story", "es": "Historia Floral" },
     "kind": "aesthetic",
     "order": 60,
-    "eyebrow": "Collection · Aesthetic",
-    "blurb": "Real pressed petals sealed in resin — romantic, nature-driven design with no flag or fandom attached.",
-    "intro": "Designs carried entirely by colour and material rather than a place: warm and cool blossoms, silver star flecks, and genuine dried petals sealed permanently into the resin layer."
+    "eyebrow": { "en": "Collection · Aesthetic", "es": "Colección · Estética" },
+    "blurb": { "en": "Real pressed petals sealed in resin — romantic, nature-driven design with no flag or fandom attached.", "es": "Pétalos reales prensados y sellados en resina — un diseño romántico e inspirado en la naturaleza, sin bandera ni fanatismo asociado." },
+    "intro": { "en": "Designs carried entirely by colour and material rather than a place: warm and cool blossoms, silver star flecks, and genuine dried petals sealed permanently into the resin layer.", "es": "Diseños que se sostienen enteramente por el color y el material, no por un lugar: flores cálidas y frías, motas de estrellas plateadas, y pétalos secos genuinos sellados de forma permanente en la capa de resina." }
   }
 ]

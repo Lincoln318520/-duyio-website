@@ -1,17 +1,24 @@
 /*
  * DUYIO site generator.
  *
- * Reads build/data/*.json and writes:
+ * Reads build/data/*.json and writes, for each locale in site.locales:
  *   - index.html                                   (homepage: explore-by-collection hub)
  *   - collections/<slug>/index.html                (one landing page per collection)
- *   - products/phone-cases/<slug>/index.html       (product detail pages — URLs unchanged)
+ *   - products/phone-cases/<slug>/index.html       (product detail pages)
  *   - sitemap.xml
+ *
+ * The default locale (site.defaultLocale) ships at the root, unprefixed
+ * (URLs unchanged from the single-locale era). Every other locale ships
+ * under /<locale>/... (e.g. /es/collections/mexico/).
  *
  * Run: npm run build
  *
- * i18n: site.json.locales drives which locales are emitted. Only "en" ships today;
- * "es" pages would render under /es/... once Spanish strings are added to the data
- * (each string becomes { en: "...", es: "..." } and t() picks the active locale).
+ * i18n: every user-facing string in the data files is either a plain string
+ * (used as-is in all locales) or a { en: "...", es: "..." } object. t(field,
+ * locale) resolves it, falling back to the default locale if a translation
+ * is missing. UI chrome strings (nav labels, buttons, etc. — not tied to
+ * one JSON record) live in site.json's "ui" block and are resolved with
+ * ui(key, locale, vars).
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -26,15 +33,56 @@ const products = JSON.parse(readFileSync(join(DATA, "products.json"), "utf8"));
 
 const ORIGIN = site.canonicalOrigin;
 const WA_URL = site.contact.whatsappUrl;
+const LOCALES = site.locales || ["en"];
+const DEFAULT_LOCALE = site.defaultLocale || "en";
 
-/* ---------- helpers ---------- */
+/* ---------- i18n helpers ---------- */
+// Resolves a data field that is either a plain string (locale-agnostic) or
+// a { en, es } object, falling back to the default locale.
+function t(field, locale) {
+  if (field && typeof field === "object" && !Array.isArray(field)) {
+    if (locale in field || DEFAULT_LOCALE in field) {
+      return field[locale] ?? field[DEFAULT_LOCALE];
+    }
+  }
+  return field;
+}
+// Resolves a UI chrome string from site.json's "ui" block, with optional
+// {placeholder} interpolation.
+function ui(key, locale, vars) {
+  const entry = site.ui[key];
+  if (!entry) throw new Error(`Missing ui string: ${key}`);
+  let s = t(entry, locale);
+  if (vars) for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, v);
+  return s;
+}
+
+/* ---------- path helpers ---------- */
+// Root-relative output path for a page, per locale (default locale ships
+// unprefixed; others ship under /<locale>/...).
+const rootPath = {
+  home: (locale) => (locale === DEFAULT_LOCALE ? "index.html" : `${locale}/index.html`),
+  collection: (locale, slug) =>
+    locale === DEFAULT_LOCALE
+      ? `collections/${slug}/index.html`
+      : `${locale}/collections/${slug}/index.html`,
+  product: (locale, slug) =>
+    locale === DEFAULT_LOCALE
+      ? `products/phone-cases/${slug}/index.html`
+      : `${locale}/products/phone-cases/${slug}/index.html`
+};
+// baseDepth is the directory depth ignoring locale (home=0, collection=2,
+// product=3); the locale prefix adds one more level for non-default locales.
+const localeDepth = (locale) => (locale === DEFAULT_LOCALE ? 0 : 1);
+
+/* ---------- generic helpers ---------- */
 const esc = (s = "") =>
   String(s)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
-const rel = (depth, path) => (depth === 0 ? path : "../".repeat(depth) + path);
+const up = (depth) => (depth === 0 ? "" : "../".repeat(depth));
 const qp = (s) => encodeURIComponent(s);
 const write = (outPath, html) => {
   const full = join(ROOT, outPath);
@@ -49,63 +97,113 @@ const productsByCollection = (slug) =>
 const productBySlug = Object.fromEntries(products.map((p) => [p.slug, p]));
 const orderedCollections = [...collections].sort((a, b) => a.order - b.order);
 
+// Builds the per-page linker helpers for a given locale + depth.
+//   a(path)     — link to another localized page (index.html, collections/…,
+//                 products/…, request-quote.html): gets the locale prefix.
+//   asset(path) — link to a shared, non-localized asset (assets/…).
+function linkers(locale, depth) {
+  const upPath = up(depth);
+  const localePrefix = locale === DEFAULT_LOCALE ? "" : `${locale}/`;
+  return {
+    a: (path) => upPath + localePrefix + path,
+    asset: (path) => upPath + path
+  };
+}
+
+// Bare market/place name for the "Building for the {market} market?"
+// collection CTA heading — e.g. "Mexico"/"México", not the adjectival
+// "Cultura Mexicana". Country collections carry an explicit `market` field
+// since it doesn't derive cleanly from the display name by regex in Spanish
+// (Cultura Mexicana -> "Mexicana" reads as an adjective, not "México").
+// Aesthetic collections (no dedicated market) fall back to their full name.
+function marketName(c, locale) {
+  if (c.market) return t(c.market, locale);
+  const name = t(c.name, locale);
+  return locale === "es" ? name.replace(/^Cultura /, "") : name.replace(/ Culture$/, "");
+}
+
+function designCountLabel(n, locale) {
+  if (locale === "es") return `${n} diseño${n === 1 ? "" : "s"}`;
+  return `${n} design${n === 1 ? "" : "s"}`;
+}
+
 /* ---------- shared chrome ---------- */
-function head({ depth, title, description, extraJsonLd = "" }) {
-  const a = (p) => rel(depth, p);
+function head({ locale, depth, rootPaths, title, description, extraJsonLd = "" }) {
+  const { asset } = linkers(locale, depth);
+  const upPath = up(depth);
+  const canonical = `${ORIGIN}/${rootPaths[locale] === "index.html" ? "" : rootPaths[locale].replace(/index\.html$/, "")}`;
+  const altLinks = LOCALES.map((loc) => {
+    const p = rootPaths[loc];
+    const url = `${ORIGIN}/${p === "index.html" ? "" : p.replace(/index\.html$/, "")}`;
+    return `<link rel="alternate" hreflang="${loc}" href="${url}" />`;
+  }).join("\n");
+  const defaultUrl = `${ORIGIN}/${
+    rootPaths[DEFAULT_LOCALE] === "index.html" ? "" : rootPaths[DEFAULT_LOCALE].replace(/index\.html$/, "")
+  }`;
   return `<!doctype html>
-<html lang="en">
+<html lang="${locale}">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}" />
-<link rel="icon" type="image/png" sizes="32x32" href="${a("assets/favicon-32.png")}" />
-<link rel="icon" type="image/png" sizes="64x64" href="${a("assets/favicon-64.png")}" />
-<link rel="apple-touch-icon" href="${a("assets/favicon-180.png")}" />
+<link rel="canonical" href="${canonical}" />
+${altLinks}
+<link rel="alternate" hreflang="x-default" href="${defaultUrl}" />
+<link rel="icon" type="image/png" sizes="32x32" href="${asset("assets/favicon-32.png")}" />
+<link rel="icon" type="image/png" sizes="64x64" href="${asset("assets/favicon-64.png")}" />
+<link rel="apple-touch-icon" href="${asset("assets/favicon-180.png")}" />
 <meta name="theme-color" content="${site.themeColor}" />
-<link rel="stylesheet" href="${a("assets/styles.css")}" />
+<link rel="stylesheet" href="${asset("assets/styles.css")}" />
 ${extraJsonLd}
 </head>
 <body>`;
 }
 
-function header(depth) {
-  const a = (p) => rel(depth, p);
-  const home = depth === 0 ? "#top" : a("index.html");
+function header({ locale, depth, isHome, rootPaths }) {
+  const { a, asset } = linkers(locale, depth);
+  const home = isHome ? "#top" : a("index.html");
+  const otherLocale = LOCALES.find((l) => l !== locale) || locale;
+  const switchHref = up(depth) + rootPaths[otherLocale];
   return `
 <header class="site">
   <div class="wrap nav-row">
-    <a class="logo" href="${home}" aria-label="DUYIO home">
-      <img src="${a("assets/logo.png")}" alt="DUYIO" />
+    <a class="logo" href="${home}" aria-label="${esc(ui("duyioHome", locale))}">
+      <img src="${asset("assets/logo.png")}" alt="DUYIO" />
     </a>
     <div class="nav-links-wrap">
-      <nav class="primary" aria-label="Primary">
-        <a href="${a("index.html")}#collections">Collections</a>
-        <a href="${a("index.html")}#quality">Design &amp; Quality</a>
-        <a href="${a("index.html")}#studio">About</a>
-        <a href="${a("index.html")}#contact">Contact</a>
+      <nav class="primary" aria-label="${esc(ui("ariaPrimary", locale))}">
+        <a href="${a("index.html")}#collections">${esc(ui("navCollections", locale))}</a>
+        <a href="${a("index.html")}#quality">${esc(ui("navQuality", locale))}</a>
+        <a href="${a("index.html")}#studio">${esc(ui("navAbout", locale))}</a>
+        <a href="${a("index.html")}#contact">${esc(ui("navContact", locale))}</a>
       </nav>
-      <a class="btn btn-primary btn-nav" href="${a("request-quote.html")}">Request Quote</a>
+      <a class="lang-switch" href="${switchHref}" hreflang="${otherLocale}">${esc(
+    ui("langSwitch", locale)
+  )}</a>
+      <a class="btn btn-primary btn-nav" href="${a("request-quote.html")}">${esc(
+    ui("navRequestQuote", locale)
+  )}</a>
     </div>
   </div>
 </header>`;
 }
 
-function footer(depth) {
-  const a = (p) => rel(depth, p);
+function footer({ locale, depth }) {
+  const { a } = linkers(locale, depth);
   return `
 <footer class="site">
   <div class="wrap footer-row">
-    <p class="footer-legal">${esc(site.legalName)} · Founded ${site.founded}<br />${esc(
-    site.address.street
-  )}, ${esc(site.address.locality)}, ${esc(site.address.region)}, ${esc(
-    site.address.postalCode
-  )}, China</p>
-    <nav aria-label="Footer">
-      <a href="${a("index.html")}#collections">Collections</a>
-      <a href="${a("index.html")}#quality">Design &amp; Quality</a>
-      <a href="${a("index.html")}#studio">About</a>
-      <a href="${a("index.html")}#contact">Contact</a>
+    <p class="footer-legal">${esc(site.legalName)} · ${esc(ui("founded", locale))} ${esc(
+    site.founded
+  )}<br />${esc(site.address.street)}, ${esc(site.address.locality)}, ${esc(
+    site.address.region
+  )}, ${esc(site.address.postalCode)}, China</p>
+    <nav aria-label="${esc(ui("ariaFooter", locale))}">
+      <a href="${a("index.html")}#collections">${esc(ui("navCollections", locale))}</a>
+      <a href="${a("index.html")}#quality">${esc(ui("navQuality", locale))}</a>
+      <a href="${a("index.html")}#studio">${esc(ui("navAbout", locale))}</a>
+      <a href="${a("index.html")}#contact">${esc(ui("navContact", locale))}</a>
     </nav>
   </div>
 </footer>
@@ -113,50 +211,50 @@ function footer(depth) {
 </html>`;
 }
 
-function processSection() {
+function processSection(locale) {
   const p = site.process;
   return `
   <section id="quality">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">${esc(p.eyebrow)}</p>
-        <h2>${esc(p.heading)}</h2>
-        <p>${esc(p.intro)}</p>
+        <p class="eyebrow">${esc(t(p.eyebrow, locale))}</p>
+        <h2>${esc(t(p.heading, locale))}</h2>
+        <p>${esc(t(p.intro, locale))}</p>
       </div>
       <ol class="process-list">
 ${p.steps
   .map(
     (s) => `        <li class="process-step">
           <span class="num">${esc(s.num)}</span>
-          <h3>${esc(s.h)}</h3>
-          <p>${esc(s.p)}</p>
+          <h3>${esc(t(s.h, locale))}</h3>
+          <p>${esc(t(s.p, locale))}</p>
         </li>`
   )
   .join("\n")}
       </ol>
-      <p class="process-note">${esc(p.note)}</p>
+      <p class="process-note">${esc(t(p.note, locale))}</p>
     </div>
   </section>`;
 }
 
-function teamSection() {
-  const t = site.team;
+function teamSection(locale) {
+  const team = site.team;
   return `
   <section id="studio">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">${esc(t.eyebrow)}</p>
-        <h2>${esc(t.heading)}</h2>
-        <p>${esc(t.intro)}</p>
+        <p class="eyebrow">${esc(t(team.eyebrow, locale))}</p>
+        <h2>${esc(t(team.heading, locale))}</h2>
+        <p>${esc(t(team.intro, locale))}</p>
       </div>
       <div class="team-grid">
-${t.members
+${team.members
   .map(
     (m) => `        <div class="team-card">
           <span class="avatar"><img src="${m.img}" alt="" loading="lazy" /></span>
           <span class="tname">${esc(m.name)}</span>
-          <span class="trole">${esc(m.role)}</span>
-          <p class="tbio">${esc(m.bio)}</p>
+          <span class="trole">${esc(t(m.role, locale))}</span>
+          <p class="tbio">${esc(t(m.bio, locale))}</p>
         </div>`
   )
   .join("\n")}
@@ -165,18 +263,22 @@ ${t.members
   </section>`;
 }
 
-function finalCta(depth) {
-  const a = (p) => rel(depth, p);
+function finalCta({ locale, depth }) {
+  const { a } = linkers(locale, depth);
   const c = site.finalCta;
   return `
   <section class="final-cta" id="contact">
     <div class="wrap cta-grid">
       <div>
-        <h2>${esc(c.heading)}</h2>
-        <p>${esc(c.body)}</p>
+        <h2>${esc(t(c.heading, locale))}</h2>
+        <p>${esc(t(c.body, locale))}</p>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="${WA_URL}" target="_blank" rel="noopener">Message on WhatsApp</a>
-          <a class="btn btn-outline" href="${a("request-quote.html")}">Request a Quote</a>
+          <a class="btn btn-primary" href="${WA_URL}" target="_blank" rel="noopener">${esc(
+    ui("messageWhatsapp", locale)
+  )}</a>
+          <a class="btn btn-outline" href="${a("request-quote.html")}">${esc(
+    ui("requestAQuote", locale)
+  )}</a>
         </div>
       </div>
       <div class="cta-contact">
@@ -187,7 +289,7 @@ function finalCta(depth) {
           site.contact.email
         )}</span></div>
         <div><span class="label">Location</span><br /><span class="val">${esc(
-          site.contact.location
+          t(site.contact.location, locale)
         )}</span></div>
       </div>
     </div>
@@ -195,9 +297,12 @@ function finalCta(depth) {
 }
 
 /* ---------- homepage ---------- */
-function renderHome() {
-  const depth = 0;
-  const a = (p) => rel(depth, p);
+function renderHome(locale) {
+  const baseDepth = 0;
+  const depth = baseDepth + localeDepth(locale);
+  const { a, asset } = linkers(locale, depth);
+  const rootPaths = Object.fromEntries(LOCALES.map((l) => [l, rootPath.home(l)]));
+
   const orgLd = `<script type="application/ld+json">
 ${JSON.stringify(
   {
@@ -230,16 +335,17 @@ ${JSON.stringify(
       const hero = items[0];
       const heroImg = hero ? `assets/products/${hero.assetDir}/main.jpg` : site.hero.image;
       const n = items.length;
+      const name = t(c.name, locale);
       return `        <a class="tile" href="${a("collections/" + c.slug + "/index.html")}" aria-label="${esc(
-        c.name
-      )} collection, ${n} design${n === 1 ? "" : "s"}">
+        name
+      )} — ${esc(designCountLabel(n, locale))}">
           <div class="tile-img-wrap" style="aspect-ratio:4/5;">
-            <img src="${a(heroImg)}" alt="${esc(c.name)} — ${esc(hero ? hero.name : "")}" loading="lazy" width="1200" height="1500" />
+            <img src="${asset(heroImg)}" alt="${esc(name)} — ${esc(hero ? t(hero.name, locale) : "")}" loading="lazy" width="1200" height="1500" />
           </div>
           <div class="tile-body">
-            <span class="tile-sku">${esc(c.eyebrow)} · ${n} design${n === 1 ? "" : "s"}</span>
-            <span class="tile-name">${esc(c.name)}</span>
-            <p class="tile-caption">${esc(c.blurb)}</p>
+            <span class="tile-sku">${esc(t(c.eyebrow, locale))} · ${esc(designCountLabel(n, locale))}</span>
+            <span class="tile-name">${esc(name)}</span>
+            <p class="tile-caption">${esc(t(c.blurb, locale))}</p>
           </div>
         </a>`;
     })
@@ -248,51 +354,53 @@ ${JSON.stringify(
   const featured = (site.featuredSlugs || [])
     .map((s) => productBySlug[s])
     .filter(Boolean)
-    .map(
-      (p) => `        <a class="tile" href="${a(
+    .map((p) => {
+      const name = t(p.name, locale);
+      return `        <a class="tile" href="${a(
         "products/phone-cases/" + p.slug + "/index.html"
-      )}" aria-label="${esc(p.name)}, product ${p.sku}">
+      )}" aria-label="${esc(name)}, ${esc(ui("productWord", locale) || "product")} ${p.sku}">
           <div class="tile-img-wrap" style="aspect-ratio:1/1;">
-            <img src="${a("assets/products/" + p.assetDir + "/main.jpg")}" alt="${esc(
-        p.name
+            <img src="${asset("assets/products/" + p.assetDir + "/main.jpg")}" alt="${esc(
+        name
       )}" loading="lazy" width="1200" height="1200" />
           </div>
           <div class="tile-body">
-            <span class="tile-sku">#${esc(p.sku)} — ${esc(collBySlug[p.collection].name)}</span>
-            <span class="tile-name">${esc(p.name)}</span>
-            <p class="tile-caption">${esc(p.tagline)}</p>
+            <span class="tile-sku">#${esc(p.sku)} — ${esc(t(collBySlug[p.collection].name, locale))}</span>
+            <span class="tile-name">${esc(name)}</span>
+            <p class="tile-caption">${esc(t(p.tagline, locale))}</p>
           </div>
-        </a>`
-    )
+        </a>`;
+    })
     .join("\n");
 
   return `${head({
+    locale,
     depth,
-    title: "DUYIO — Original Design, Managed Production for Accessories & Gifts",
-    description:
-      "DUYIO designs original, culture-inspired accessories and gifts in Guangzhou and manages production through a 500+ factory network across China — from concept to finished order.",
+    rootPaths,
+    title: t(site.seo.homeTitle, locale),
+    description: t(site.seo.homeDescription, locale),
     extraJsonLd: orgLd
   })}
-${header(depth)}
+${header({ locale, depth, isHome: true, rootPaths })}
 
 <main id="top">
 
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">${esc(site.hero.eyebrow)}</p>
-        <h1>${site.hero.headlineHtml}</h1>
-        <p class="lede">${esc(site.hero.lede)}</p>
+        <p class="eyebrow">${esc(t(site.hero.eyebrow, locale))}</p>
+        <h1>${t(site.hero.headlineHtml, locale)}</h1>
+        <p class="lede">${esc(t(site.hero.lede, locale))}</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#collections">Explore Collections →</a>
-          <a class="btn btn-outline" href="${a("request-quote.html")}">Request a Quote</a>
+          <a class="btn btn-primary" href="#collections">${esc(ui("exploreCollections", locale))}</a>
+          <a class="btn btn-outline" href="${a("request-quote.html")}">${esc(ui("requestAQuote", locale))}</a>
         </div>
       </div>
       <div class="hero-visual">
-        <img src="${a(site.hero.image)}" alt="${esc(
-    site.hero.imageAlt
+        <img src="${asset(site.hero.image)}" alt="${esc(
+    t(site.hero.imageAlt, locale)
   )}" width="1200" height="1200" />
-        <span class="hero-tag">${esc(site.hero.tag)}</span>
+        <span class="hero-tag">${esc(t(site.hero.tag, locale))}</span>
       </div>
     </div>
   </section>
@@ -301,9 +409,9 @@ ${header(depth)}
     <div class="wrap trust-grid">
 ${site.trust
   .map(
-    (t) => `      <div class="trust-item">
-        <span class="label">${esc(t.label)}</span>
-        <span class="value">${esc(t.value)}</span>
+    (tr) => `      <div class="trust-item">
+        <span class="label">${esc(t(tr.label, locale))}</span>
+        <span class="value">${esc(t(tr.value, locale))}</span>
       </div>`
   )
   .join("\n")}
@@ -313,10 +421,10 @@ ${site.trust
   <section id="collections">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Explore by Culture</p>
-        <h2>Pick a story, then a design.</h2>
+        <p class="eyebrow">${esc(ui("exploreByCulture", locale))}</p>
+        <h2>${esc(ui("pickAStory", locale))}</h2>
       </div>
-      <p class="collections-intro">Every collection is built around one culture or one aesthetic idea — not a warehouse of unrelated SKUs. Start with the market you sell into.</p>
+      <p class="collections-intro">${esc(ui("collectionsIntro", locale))}</p>
       <div class="collection-grid grid-3">
 ${collCards}
       </div>
@@ -328,8 +436,8 @@ ${collCards}
   <section>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Featured</p>
-        <h2>A few to start with.</h2>
+        <p class="eyebrow">${esc(ui("featured", locale))}</p>
+        <h2>${esc(ui("aFewToStart", locale))}</h2>
       </div>
       <div class="collection-grid grid-4">
 ${featured}
@@ -338,48 +446,54 @@ ${featured}
   </section>
 
   <div class="pour-divider"><span></span><span class="bead"></span></div>
-${processSection()}
+${processSection(locale)}
   <div class="pour-divider"><span></span><span class="bead"></span></div>
-${teamSection()}
-${finalCta(depth)}
+${teamSection(locale)}
+${finalCta({ locale, depth })}
 </main>
-${footer(depth)}`;
+${footer({ locale, depth })}`;
 }
 
 /* ---------- collection page ---------- */
-function renderCollection(c) {
-  const depth = 2;
-  const a = (p) => rel(depth, p);
+function renderCollection(c, locale) {
+  const baseDepth = 2;
+  const depth = baseDepth + localeDepth(locale);
+  const { a, asset } = linkers(locale, depth);
+  const rootPaths = Object.fromEntries(LOCALES.map((l) => [l, rootPath.collection(l, c.slug)]));
   const items = productsByCollection(c.slug);
+  const name = t(c.name, locale);
 
   const byMaterial = {};
-  for (const p of items) (byMaterial[p.materialTag] ||= []).push(p);
+  for (const p of items) (byMaterial[t(p.materialTag, locale)] ||= []).push(p);
   const materialGroups = Object.keys(byMaterial);
   const groupBy = materialGroups.length > 1;
 
   const gridClass = items.length >= 4 ? "grid-4" : items.length === 3 ? "grid-3" : "grid-2";
 
-  const tile = (p) => `          <a class="tile" href="${a(
-    "products/phone-cases/" + p.slug + "/index.html"
-  )}" aria-label="${esc(p.name)}, product ${p.sku}">
+  const tile = (p) => {
+    const pname = t(p.name, locale);
+    return `          <a class="tile" href="${a(
+      "products/phone-cases/" + p.slug + "/index.html"
+    )}" aria-label="${esc(pname)}, ${esc(ui("productWord", locale) || "product")} ${p.sku}">
             <div class="tile-img-wrap" style="aspect-ratio:1/1;">
-              <img src="${a("assets/products/" + p.assetDir + "/main.jpg")}" alt="${esc(
-    p.name
-  )}" loading="lazy" width="1200" height="1200" />
+              <img src="${asset("assets/products/" + p.assetDir + "/main.jpg")}" alt="${esc(
+      pname
+    )}" loading="lazy" width="1200" height="1200" />
             </div>
             <div class="tile-body">
-              <span class="tile-sku">#${esc(p.sku)} · ${esc(p.materialTag)}</span>
-              <span class="tile-name">${esc(p.name)}</span>
-              <p class="tile-caption">${esc(p.card || p.tagline)}</p>
+              <span class="tile-sku">#${esc(p.sku)} · ${esc(t(p.materialTag, locale))}</span>
+              <span class="tile-name">${esc(pname)}</span>
+              <p class="tile-caption">${esc(t(p.card, locale) || t(p.tagline, locale))}</p>
             </div>
           </a>`;
+  };
 
   let gridBlocks;
   if (groupBy) {
     gridBlocks = materialGroups
       .map(
         (m) => `      <div class="collection-block">
-        <p class="collection-label"><span class="n">Material</span> ${esc(m)}</p>
+        <p class="collection-label"><span class="n">${esc(ui("material", locale))}</span> ${esc(m)}</p>
         <div class="collection-grid ${byMaterial[m].length >= 3 ? "grid-3" : "grid-2"}">
 ${byMaterial[m].map(tile).join("\n")}
         </div>
@@ -400,12 +514,12 @@ ${JSON.stringify(
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: ORIGIN + "/" },
+      { "@type": "ListItem", position: 1, name: ui("home", locale), item: ORIGIN + "/" },
       {
         "@type": "ListItem",
         position: 2,
-        name: c.name,
-        item: `${ORIGIN}/collections/${c.slug}/`
+        name,
+        item: `${ORIGIN}/${rootPaths[locale].replace(/index\.html$/, "")}`
       }
     ]
   },
@@ -415,28 +529,30 @@ ${JSON.stringify(
 </script>`;
 
   return `${head({
+    locale,
     depth,
-    title: `${c.name} — Culture-Inspired Phone Cases | DUYIO`,
-    description: `${c.name}: ${c.blurb}`,
+    rootPaths,
+    title: `${name} — ${ui("cultureInspiredCases", locale)} | DUYIO`,
+    description: `${name}: ${t(c.blurb, locale)}`,
     extraJsonLd: breadcrumbLd
   })}
-${header(depth)}
+${header({ locale, depth, isHome: false, rootPaths })}
 
 <main id="top">
   <div class="wrap">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="${a("index.html")}">Home</a>
+    <nav class="breadcrumb" aria-label="${esc(ui("ariaBreadcrumb", locale))}">
+      <a href="${a("index.html")}">${esc(ui("home", locale))}</a>
       <span class="sep">/</span>
-      <span class="current">${esc(c.name)}</span>
+      <span class="current">${esc(name)}</span>
     </nav>
   </div>
 
   <section>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">${esc(c.eyebrow)}</p>
-        <h2>${esc(c.name)}</h2>
-        <p>${esc(c.intro)}</p>
+        <p class="eyebrow">${esc(t(c.eyebrow, locale))}</p>
+        <h2>${esc(name)}</h2>
+        <p>${esc(t(c.intro, locale))}</p>
       </div>
 ${gridBlocks}
     </div>
@@ -447,26 +563,30 @@ ${gridBlocks}
   <section>
     <div class="wrap">
       <div class="pdp-cta">
-        <h3>Building for the ${esc(c.name.replace(/ Culture$/, ""))} market?</h3>
-        <p>Tell us your target models, quantities and timeline — we'll confirm pricing and get a sample moving.</p>
+        <h3>${esc(ui("buildingForMarket", locale, { market: marketName(c, locale) }))}</h3>
+        <p>${esc(ui("tellUsModels", locale))}</p>
         <div class="product-actions">
-          <a class="btn btn-primary" href="${a("request-quote.html")}">Request a Quote</a>
-          <a class="btn btn-outline" href="${a("index.html")}#collections">All Collections</a>
+          <a class="btn btn-primary" href="${a("request-quote.html")}">${esc(ui("requestAQuote", locale))}</a>
+          <a class="btn btn-outline" href="${a("index.html")}#collections">${esc(ui("allCollections", locale))}</a>
         </div>
       </div>
     </div>
   </section>
 </main>
-${footer(depth)}`;
+${footer({ locale, depth })}`;
 }
 
 /* ---------- product page ---------- */
-function renderProduct(p) {
-  const depth = 3;
-  const a = (path) => rel(depth, path);
+function renderProduct(p, locale) {
+  const baseDepth = 3;
+  const depth = baseDepth + localeDepth(locale);
+  const { a, asset } = linkers(locale, depth);
+  const rootPaths = Object.fromEntries(LOCALES.map((l) => [l, rootPath.product(l, p.slug)]));
   const c = collBySlug[p.collection];
   const dir = `assets/products/${p.assetDir}`;
-  const rq = `${a("request-quote.html")}?product=${qp(p.name)}&sku=${qp(p.sku)}&src=${p.slug}`;
+  const name = t(p.name, locale);
+  const collName = t(c.name, locale);
+  const rq = `${a("request-quote.html")}?product=${qp(name)}&sku=${qp(p.sku)}&src=${p.slug}`;
   const priceStr = p.price.toFixed(2);
 
   const productLd = `<script type="application/ld+json">
@@ -474,9 +594,9 @@ ${JSON.stringify(
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: p.name,
+    name,
     sku: p.sku,
-    description: p.schemaDescription || p.tagline,
+    description: t(p.schemaDescription, locale) || t(p.tagline, locale),
     brand: { "@type": "Brand", name: "DUYIO" },
     image: [`${ORIGIN}/${dir}/main.jpg`],
     offers: {
@@ -486,7 +606,7 @@ ${JSON.stringify(
       priceValidUntil: "2026-12-31",
       eligibleQuantity: { "@type": "QuantitativeValue", minValue: 200, unitText: "pcs per model" },
       availability: "https://schema.org/InStock",
-      url: `${ORIGIN}/products/phone-cases/${p.slug}/`
+      url: `${ORIGIN}/${rootPaths[locale].replace(/index\.html$/, "")}`
     }
   },
   null,
@@ -499,13 +619,18 @@ ${JSON.stringify(
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: ORIGIN + "/" },
-      { "@type": "ListItem", position: 2, name: c.name, item: `${ORIGIN}/collections/${c.slug}/` },
+      { "@type": "ListItem", position: 1, name: ui("home", locale), item: ORIGIN + "/" },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: collName,
+        item: `${ORIGIN}/${rootPath.collection(locale, c.slug).replace(/index\.html$/, "")}`
+      },
       {
         "@type": "ListItem",
         position: 3,
-        name: p.name,
-        item: `${ORIGIN}/products/phone-cases/${p.slug}/`
+        name,
+        item: `${ORIGIN}/${rootPaths[locale].replace(/index\.html$/, "")}`
       }
     ]
   },
@@ -515,106 +640,117 @@ ${JSON.stringify(
 </script>`;
 
   const story = p.story
-    .map((para, i) => `      <p${i === 0 ? ' class="lead"' : ""}>${esc(para)}</p>`)
+    .map((para, i) => `      <p${i === 0 ? ' class="lead"' : ""}>${esc(t(para, locale))}</p>`)
     .join("\n");
 
   const craft = p.craft
-    .map(
-      (x) => `        <div class="callout-card">
-          <img src="${a(dir + "/" + x.img)}" alt="${esc(x.h)}" loading="lazy" />
+    .map((x) => {
+      const h = t(x.h, locale);
+      return `        <div class="callout-card">
+          <img src="${asset(dir + "/" + x.img)}" alt="${esc(h)}" loading="lazy" />
           <div class="callout-body">
-            <h3>${esc(x.h)}</h3>
-            <p>${esc(x.p)}</p>
+            <h3>${esc(h)}</h3>
+            <p>${esc(t(x.p, locale))}</p>
           </div>
-        </div>`
-    )
+        </div>`;
+    })
     .join("\n");
 
   const features = p.features
-    .map(
-      (x) => `        <div class="callout-card">
-          <img src="${a(dir + "/" + x.img)}" alt="${esc(x.h)}" loading="lazy" />
+    .map((x) => {
+      const h = t(x.h, locale);
+      return `        <div class="callout-card">
+          <img src="${asset(dir + "/" + x.img)}" alt="${esc(h)}" loading="lazy" />
           <div class="callout-body">
-            <h3>${esc(x.h)}</h3>
-            <p>${esc(x.p)}</p>
+            <h3>${esc(h)}</h3>
+            <p>${esc(t(x.p, locale))}</p>
           </div>
-        </div>`
-    )
+        </div>`;
+    })
     .join("\n");
 
-  const galleryJs = JSON.stringify(p.images);
+  const galleryImages = p.images.map((img) => ({ key: img.key, alt: t(img.alt, locale) }));
+  const galleryJs = JSON.stringify(galleryImages);
 
   return `${head({
+    locale,
     depth,
-    title: `${p.name} — #${p.sku} | DUYIO`,
-    description: p.metaDescription,
+    rootPaths,
+    title: `${name} — #${p.sku} | DUYIO`,
+    description: t(p.metaDescription, locale),
     extraJsonLd: productLd
   })}
-${header(depth)}
+${header({ locale, depth, isHome: false, rootPaths })}
 
 <main id="top">
   <div class="wrap">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="${a("index.html")}">Home</a>
+    <nav class="breadcrumb" aria-label="${esc(ui("ariaBreadcrumb", locale))}">
+      <a href="${a("index.html")}">${esc(ui("home", locale))}</a>
       <span class="sep">/</span>
-      <a href="${a("collections/" + c.slug + "/index.html")}">${esc(c.name)}</a>
+      <a href="${a("collections/" + c.slug + "/index.html")}">${esc(collName)}</a>
       <span class="sep">/</span>
-      <span class="current">${esc(p.name)}</span>
+      <span class="current">${esc(name)}</span>
     </nav>
   </div>
 
   <section class="product-hero wrap">
     <div class="product-gallery">
       <div class="gallery-main">
-        <img id="gallery-main-img" src="${a(dir + "/main.jpg")}" alt="${esc(
-    p.name
-  )}, main product shot" />
+        <img id="gallery-main-img" src="${asset(dir + "/main.jpg")}" alt="${esc(
+    name
+  )}, ${esc(ui("mainProductShot", locale))}" />
       </div>
       <div class="gallery-thumbs" id="gallery-thumbs"></div>
     </div>
 
     <div class="product-info">
       <div class="product-title-sku">
-        <span class="tile-sku">#${esc(p.sku)} — ${esc(c.name)} · ${esc(p.materialTag)}</span>
-        <h1>${esc(p.name)}</h1>
+        <span class="tile-sku">#${esc(p.sku)} — ${esc(collName)} · ${esc(t(p.materialTag, locale))}</span>
+        <h1>${esc(name)}</h1>
       </div>
-      <p class="product-tagline">${esc(p.tagline)}</p>
+      <p class="product-tagline">${esc(t(p.tagline, locale))}</p>
 
       <div class="fact-grid">
         <div class="fact-cell">
-          <span class="label">Model No.</span>
+          <span class="label">${esc(ui("modelNo", locale))}</span>
           <span class="value">${esc(p.sku)}</span>
         </div>
         <div class="fact-cell">
-          <span class="label">MOQ</span>
-          <span class="value">${esc(p.moq)}</span>
+          <span class="label">${esc(ui("moq", locale))}</span>
+          <span class="value">${esc(t(p.moq, locale))}</span>
         </div>
         <div class="fact-cell">
-          <span class="label">Material</span>
+          <span class="label">${esc(ui("material", locale))}</span>
           <span class="value" style="font-family: var(--font-body); font-size: 0.95rem;">${esc(
-            p.material
+            t(p.material, locale)
           )}</span>
         </div>
         <div class="fact-cell">
-          <span class="label">Lead Time</span>
-          <span class="value">${esc(p.leadTime)}</span>
+          <span class="label">${esc(ui("leadTime", locale))}</span>
+          <span class="value">${esc(t(p.leadTime, locale))}</span>
         </div>
         <div class="fact-cell full">
-          <span class="label">FOB Price (USD)</span>
-          <span class="value">From $${priceStr} / pc <span style="font-family: var(--font-body); font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">at MOQ — final price depends on order quantity and customization</span></span>
+          <span class="label">${esc(ui("fobPrice", locale))}</span>
+          <span class="value">${esc(
+            ui("fromPricePerPc", locale, { price: priceStr })
+          )} <span style="font-family: var(--font-body); font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">${esc(
+    ui("priceNote", locale)
+  )}</span></span>
         </div>
       </div>
 
       <div class="product-actions">
-        <a class="btn btn-primary" href="${rq}">Request a Quote</a>
-        <a class="btn btn-outline" href="${WA_URL}" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        <a class="btn btn-primary" href="${rq}">${esc(ui("requestAQuote", locale))}</a>
+        <a class="btn btn-outline" href="${WA_URL}" target="_blank" rel="noopener">${esc(
+    ui("askWhatsapp", locale)
+  )}</a>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap story-block">
-      <p class="eyebrow">The Design</p>
+      <p class="eyebrow">${esc(ui("theDesign", locale))}</p>
 ${story}
     </div>
   </section>
@@ -624,8 +760,8 @@ ${story}
   <section>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Craft &amp; Structure</p>
-        <h2>${esc(p.craftHeading)}</h2>
+        <p class="eyebrow">${esc(ui("craftStructure", locale))}</p>
+        <h2>${esc(t(p.craftHeading, locale))}</h2>
       </div>
       <div class="callout-grid">
 ${craft}
@@ -636,8 +772,8 @@ ${craft}
   <section>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Key Features</p>
-        <h2>${esc(p.featureHeading || "Three details that carry the design.")}</h2>
+        <p class="eyebrow">${esc(ui("keyFeatures", locale))}</p>
+        <h2>${esc(t(p.featureHeading, locale) || ui("threeDetails", locale))}</h2>
       </div>
       <div class="feature-strip">
 ${features}
@@ -650,11 +786,13 @@ ${features}
   <section>
     <div class="wrap">
       <div class="compat-banner">
-        <img src="${a(dir + "/" + p.compat.img)}" alt="${esc(p.name)} shown fitted to a phone" loading="lazy" />
+        <img src="${asset(dir + "/" + p.compat.img)}" alt="${esc(name)} ${esc(
+    ui("shownFittedToPhone", locale)
+  )}" loading="lazy" />
         <div class="compat-copy">
-          <p class="eyebrow">Compatibility</p>
-          <h3>${esc(p.compat.heading)}</h3>
-          <p>${esc(p.compat.text)}</p>
+          <p class="eyebrow">${esc(ui("compatibility", locale))}</p>
+          <h3>${esc(t(p.compat.heading, locale))}</h3>
+          <p>${esc(t(p.compat.text, locale))}</p>
         </div>
       </div>
     </div>
@@ -663,22 +801,22 @@ ${features}
   <section>
     <div class="wrap">
       <div class="pdp-cta">
-        <h3>Want this design, or something like it?</h3>
-        <p>Tell us your target models, quantities and timeline — we'll confirm pricing and get a sample moving.</p>
+        <h3>${esc(ui("wantThisDesign", locale))}</h3>
+        <p>${esc(ui("tellUsModels", locale))}</p>
         <div class="product-actions">
-          <a class="btn btn-primary" href="${rq}">Request a Quote</a>
-          <a class="btn btn-outline" href="${a("collections/" + c.slug + "/index.html")}">More ${esc(
-    c.name
+          <a class="btn btn-primary" href="${rq}">${esc(ui("requestAQuote", locale))}</a>
+          <a class="btn btn-outline" href="${a("collections/" + c.slug + "/index.html")}">${esc(
+    ui("moreCollection", locale, { collection: collName })
   )}</a>
         </div>
       </div>
     </div>
   </section>
 </main>
-${footer(depth)}
+${footer({ locale, depth })}
 
 <script>
-  var DIR = "${a(dir)}/";
+  var DIR = "${asset(dir)}/";
   var IMAGES = ${galleryJs};
   var mainImg = document.getElementById("gallery-main-img");
   var thumbWrap = document.getElementById("gallery-thumbs");
@@ -705,12 +843,14 @@ ${footer(depth)}
 
 /* ---------- sitemap ---------- */
 function renderSitemap() {
-  const urls = [
-    `${ORIGIN}/`,
-    `${ORIGIN}/request-quote.html`,
-    ...orderedCollections.map((c) => `${ORIGIN}/collections/${c.slug}/`),
-    ...products.map((p) => `${ORIGIN}/products/phone-cases/${p.slug}/`)
+  const pages = [
+    ...LOCALES.map((l) => rootPath.home(l)),
+    ...orderedCollections.flatMap((c) => LOCALES.map((l) => rootPath.collection(l, c.slug))),
+    ...products.flatMap((p) => LOCALES.map((l) => rootPath.product(l, p.slug)))
   ];
+  const urls = pages.map((p) => `${ORIGIN}/${p.replace(/index\.html$/, "")}`);
+  urls.push(`${ORIGIN}/request-quote.html`);
+  if (LOCALES.includes("es")) urls.push(`${ORIGIN}/es/request-quote.html`);
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
@@ -721,15 +861,23 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
 /* ---------- run ---------- */
 console.log("Building DUYIO site…");
 
-// Clean generated collection pages (product/index pages are overwritten in place).
+// Clean generated collection pages (product/index/locale pages are
+// overwritten in place; the locale subdirectories are fully regenerated).
 const collDir = join(ROOT, "collections");
 if (existsSync(collDir)) rmSync(collDir, { recursive: true, force: true });
+for (const locale of LOCALES) {
+  if (locale === DEFAULT_LOCALE) continue;
+  const localeDir = join(ROOT, locale);
+  if (existsSync(localeDir)) rmSync(localeDir, { recursive: true, force: true });
+}
 
-write("index.html", renderHome());
-for (const c of collections) write(`collections/${c.slug}/index.html`, renderCollection(c));
-for (const p of products) write(`products/phone-cases/${p.slug}/index.html`, renderProduct(p));
+for (const locale of LOCALES) {
+  write(rootPath.home(locale), renderHome(locale));
+  for (const c of collections) write(rootPath.collection(locale, c.slug), renderCollection(c, locale));
+  for (const p of products) write(rootPath.product(locale, p.slug), renderProduct(p, locale));
+}
 write("sitemap.xml", renderSitemap());
 
 console.log(
-  `Done. ${collections.length} collections, ${products.length} products.`
+  `Done. ${LOCALES.length} locale(s), ${collections.length} collections, ${products.length} products.`
 );

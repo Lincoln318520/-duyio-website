@@ -229,6 +229,23 @@ nav.primary a {
 nav.primary a:hover { color: var(--text); }
 .nav-links-wrap { display: flex; align-items: center; gap: clamp(1.25rem, 3vw, 2.5rem); }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.15rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.lang-switch:hover { color: var(--text); border-color: var(--gold); }
+
 @media (max-width: 760px) {
   nav.primary { display: none; }
 }
