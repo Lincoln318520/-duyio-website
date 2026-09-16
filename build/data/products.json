@@ -8,7 +8,7 @@
     "assetDir": "sol-de-mayo",
     "materialTag": "Resin · 3D Gold Emblem",
     "material": "Clear resin shell, raised 3D gold sun emblem, gold flake accents, electroplated gold frame",
-    "price": 0.70,
+    "price": 0.7,
     "moq": "200 pcs / model, 50 / color",
     "leadTime": "15–25 Days",
     "tagline": "A raised gold Sol de Mayo emblem on a clear, gold-flecked back — Argentina's most recognized national symbol, worn directly.",
@@ -22,31 +22,97 @@
     ],
     "craftHeading": "Molded gold, not printed gold.",
     "craft": [
-      { "img": "feature1.jpg", "h": "Raised 3D Gold Emblem", "p": "The Sol de Mayo sun is molded as a dimensional, metal-effect piece rather than printed, set proud of the case's clear back." },
-      { "img": "feature2.jpg", "h": "Full-Wrap Protection", "p": "Raised edges wrap the corners and camera module for drop protection without covering the design." }
+      {
+        "img": "feature1.jpg",
+        "h": "Raised 3D Gold Emblem",
+        "p": "The Sol de Mayo sun is molded as a dimensional, metal-effect piece rather than printed, set proud of the case's clear back."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Full-Wrap Protection",
+        "p": "Raised edges wrap the corners and camera module for drop protection without covering the design."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature1.jpg", "h": "3D Gold Relief", "p": "A molded, dimensional Sol de Mayo emblem in a metal-effect gold finish, not a flat print." },
-      { "img": "feature2.jpg", "h": "Full-Body Protection", "p": "Raised edges around the corners and camera keep the case protective without hiding the design." },
-      { "img": "feature3.jpg", "h": "Electroplated Gold Edge", "p": "A gold-tone electroplated frame runs the full edge of the case, matching the emblem's finish." }
+      {
+        "img": "feature1.jpg",
+        "h": "3D Gold Relief",
+        "p": "A molded, dimensional Sol de Mayo emblem in a metal-effect gold finish, not a flat print."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Full-Body Protection",
+        "p": "Raised edges around the corners and camera keep the case protective without hiding the design."
+      },
+      {
+        "img": "feature3.jpg",
+        "h": "Electroplated Gold Edge",
+        "p": "A gold-tone electroplated frame runs the full edge of the case, matching the emblem's finish."
+      }
     ],
-    "compat": { "img": "scene-daily.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "scene-daily.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "feature1", "alt": "3D gold sun relief close-up" },
-      { "key": "feature2", "alt": "Full-body protection close-up" },
-      { "key": "feature3", "alt": "Electroplated gold edge close-up" },
-      { "key": "material", "alt": "Gold flake material close-up" },
-      { "key": "structure", "alt": "Edge protection structure close-up" },
-      { "key": "detail-relief", "alt": "Gold relief detail close-up" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "scene-clear", "alt": "Case styled to show clear resin back" },
-      { "key": "scene-daily", "alt": "Case styled for daily commute use" },
-      { "key": "scene-culture", "alt": "Scene styled around Argentine culture" },
-      { "key": "scene-use", "alt": "Case shown in everyday use" },
-      { "key": "aftersale", "alt": "After-sale and quality assurance" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "feature1",
+        "alt": "3D gold sun relief close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Full-body protection close-up"
+      },
+      {
+        "key": "feature3",
+        "alt": "Electroplated gold edge close-up"
+      },
+      {
+        "key": "material",
+        "alt": "Gold flake material close-up"
+      },
+      {
+        "key": "structure",
+        "alt": "Edge protection structure close-up"
+      },
+      {
+        "key": "detail-relief",
+        "alt": "Gold relief detail close-up"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "scene-clear",
+        "alt": "Case styled to show clear resin back"
+      },
+      {
+        "key": "scene-daily",
+        "alt": "Case styled for daily commute use"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Scene styled around Argentine culture"
+      },
+      {
+        "key": "scene-use",
+        "alt": "Case shown in everyday use"
+      },
+      {
+        "key": "aftersale",
+        "alt": "After-sale and quality assurance"
+      }
     ]
   },
   {
@@ -72,31 +138,97 @@
     ],
     "craftHeading": "Dimensional print, camera-first fit.",
     "craft": [
-      { "img": "feature1.jpg", "h": "Raised 3D Number", "p": "The No. 10 sits above the surface rather than printed flat, giving the case a dimensional, sculpted feel under light." },
-      { "img": "camera-detail.jpg", "h": "Camera Protection", "p": "A raised edge around the camera module keeps lenses off flat surfaces and clear of scratches, cut precisely to each phone model." }
+      {
+        "img": "feature1.jpg",
+        "h": "Raised 3D Number",
+        "p": "The No. 10 sits above the surface rather than printed flat, giving the case a dimensional, sculpted feel under light."
+      },
+      {
+        "img": "camera-detail.jpg",
+        "h": "Camera Protection",
+        "p": "A raised edge around the camera module keeps lenses off flat surfaces and clear of scratches, cut precisely to each phone model."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature2.jpg", "h": "Sculpted No. 10", "p": "A dimensional take on football's most storied number, rendered as a raised centerpiece rather than a flat graphic." },
-      { "img": "feature3.jpg", "h": "Argentina Colors", "p": "Sky-blue and white base with gold glitter accents referencing the World Cup trophy and Argentina's three championship stars." },
-      { "img": "detail-material.jpg", "h": "Gold Glitter Finish", "p": "Fine gold glitter runs through the resin layer, catching light differently as the case moves in hand." }
+      {
+        "img": "feature2.jpg",
+        "h": "Sculpted No. 10",
+        "p": "A dimensional take on football's most storied number, rendered as a raised centerpiece rather than a flat graphic."
+      },
+      {
+        "img": "feature3.jpg",
+        "h": "Argentina Colors",
+        "p": "Sky-blue and white base with gold glitter accents referencing the World Cup trophy and Argentina's three championship stars."
+      },
+      {
+        "img": "detail-material.jpg",
+        "h": "Gold Glitter Finish",
+        "p": "Fine gold glitter runs through the resin layer, catching light differently as the case moves in hand."
+      }
     ],
-    "compat": { "img": "compat.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "compat.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "feature1", "alt": "3D number 10 close-up" },
-      { "key": "feature2", "alt": "Sky-blue and gold palette close-up" },
-      { "key": "feature3", "alt": "Gold glitter finish close-up" },
-      { "key": "camera-detail", "alt": "Camera protection close-up" },
-      { "key": "detail-material", "alt": "Gold glitter material close-up" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "scene-glory", "alt": "Scene styled around football glory and pride" },
-      { "key": "scene-hold", "alt": "Case held in hand, styled" },
-      { "key": "scene-fan", "alt": "Case styled for football fan everyday wear" },
-      { "key": "compat", "alt": "Multi-model compatibility" },
-      { "key": "compat-icons", "alt": "Compatibility icon summary" },
-      { "key": "aftersale", "alt": "After-sale and quality assurance" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "feature1",
+        "alt": "3D number 10 close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Sky-blue and gold palette close-up"
+      },
+      {
+        "key": "feature3",
+        "alt": "Gold glitter finish close-up"
+      },
+      {
+        "key": "camera-detail",
+        "alt": "Camera protection close-up"
+      },
+      {
+        "key": "detail-material",
+        "alt": "Gold glitter material close-up"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "scene-glory",
+        "alt": "Scene styled around football glory and pride"
+      },
+      {
+        "key": "scene-hold",
+        "alt": "Case held in hand, styled"
+      },
+      {
+        "key": "scene-fan",
+        "alt": "Case styled for football fan everyday wear"
+      },
+      {
+        "key": "compat",
+        "alt": "Multi-model compatibility"
+      },
+      {
+        "key": "compat-icons",
+        "alt": "Compatibility icon summary"
+      },
+      {
+        "key": "aftersale",
+        "alt": "After-sale and quality assurance"
+      }
     ]
   },
   {
@@ -122,30 +254,93 @@
     ],
     "craftHeading": "Bold color, precisely finished.",
     "craft": [
-      { "img": "material.jpg", "h": "Gold Foil Resin", "p": "Fine gold-foil fragments are set into the resin layer across the blue and yellow base, catching light unevenly like scattered sunlight." },
-      { "img": "structure.jpg", "h": "Precision Camera Cutout", "p": "The camera opening is cut flush to the module on each supported phone model, keeping lenses clear and the case sitting flat." }
+      {
+        "img": "material.jpg",
+        "h": "Gold Foil Resin",
+        "p": "Fine gold-foil fragments are set into the resin layer across the blue and yellow base, catching light unevenly like scattered sunlight."
+      },
+      {
+        "img": "structure.jpg",
+        "h": "Precision Camera Cutout",
+        "p": "The camera opening is cut flush to the module on each supported phone model, keeping lenses clear and the case sitting flat."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature1.jpg", "h": "Boca Colors", "p": "High-contrast blue and yellow drawn directly from Buenos Aires' La Boca neighborhood and its football culture." },
-      { "img": "feature2.jpg", "h": "Clean Camera Fit", "p": "A precisely aligned camera cutout keeps the module accessible and the case profile slim." },
-      { "img": "feature3.jpg", "h": "Consistent Detail", "p": "Color values and pattern placement are held consistent across production, so the sample you approve is what ships." }
+      {
+        "img": "feature1.jpg",
+        "h": "Boca Colors",
+        "p": "High-contrast blue and yellow drawn directly from Buenos Aires' La Boca neighborhood and its football culture."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Clean Camera Fit",
+        "p": "A precisely aligned camera cutout keeps the module accessible and the case profile slim."
+      },
+      {
+        "img": "feature3.jpg",
+        "h": "Consistent Detail",
+        "p": "Color values and pattern placement are held consistent across production, so the sample you approve is what ships."
+      }
     ],
-    "compat": { "img": "scene-daily.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "scene-daily.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "feature1", "alt": "Boca blue and yellow color close-up" },
-      { "key": "feature2", "alt": "Camera cutout close-up" },
-      { "key": "feature3", "alt": "Pattern consistency close-up" },
-      { "key": "material", "alt": "Gold foil resin close-up" },
-      { "key": "structure", "alt": "Camera cutout structure close-up" },
-      { "key": "detail-pattern", "alt": "Pattern detail close-up" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "scene-culture", "alt": "Scene styled around football culture" },
-      { "key": "scene-collect", "alt": "Case styled as a collectible" },
-      { "key": "scene-daily", "alt": "Case styled for daily wear" },
-      { "key": "scene-fan-daily", "alt": "Case styled for football fan everyday use" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "feature1",
+        "alt": "Boca blue and yellow color close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Camera cutout close-up"
+      },
+      {
+        "key": "feature3",
+        "alt": "Pattern consistency close-up"
+      },
+      {
+        "key": "material",
+        "alt": "Gold foil resin close-up"
+      },
+      {
+        "key": "structure",
+        "alt": "Camera cutout structure close-up"
+      },
+      {
+        "key": "detail-pattern",
+        "alt": "Pattern detail close-up"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Scene styled around football culture"
+      },
+      {
+        "key": "scene-collect",
+        "alt": "Case styled as a collectible"
+      },
+      {
+        "key": "scene-daily",
+        "alt": "Case styled for daily wear"
+      },
+      {
+        "key": "scene-fan-daily",
+        "alt": "Case styled for football fan everyday use"
+      }
     ]
   },
   {
@@ -171,30 +366,93 @@
     ],
     "craftHeading": "Fine linework, jewelry-grade finish.",
     "craft": [
-      { "img": "material.jpg", "h": "Gold Line-Art", "p": "The gaucho figure and mate gourd are traced in fine gold linework over a clear resin base flecked with glitter." },
-      { "img": "structure.jpg", "h": "Electroplated Camera Frame", "p": "A sleek electroplated frame surrounds the camera module for a polished, jewelry-like finish and dependable lens protection." }
+      {
+        "img": "material.jpg",
+        "h": "Gold Line-Art",
+        "p": "The gaucho figure and mate gourd are traced in fine gold linework over a clear resin base flecked with glitter."
+      },
+      {
+        "img": "structure.jpg",
+        "h": "Electroplated Camera Frame",
+        "p": "A sleek electroplated frame surrounds the camera module for a polished, jewelry-like finish and dependable lens protection."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature1.jpg", "h": "Gaucho Silhouette", "p": "A graceful line-art figure representing Argentina's Pampas horsemen, symbols of freedom and rural identity." },
-      { "img": "feature2.jpg", "h": "Mate Culture Detail", "p": "The mate gourd and metal bombilla straw reference Argentina's most enduring ritual of hospitality and trust." },
-      { "img": "button-detail.jpg", "h": "Precise Cutouts", "p": "Button, port and speaker cutouts are aligned to each phone model for a secure, responsive fit." }
+      {
+        "img": "feature1.jpg",
+        "h": "Gaucho Silhouette",
+        "p": "A graceful line-art figure representing Argentina's Pampas horsemen, symbols of freedom and rural identity."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Mate Culture Detail",
+        "p": "The mate gourd and metal bombilla straw reference Argentina's most enduring ritual of hospitality and trust."
+      },
+      {
+        "img": "button-detail.jpg",
+        "h": "Precise Cutouts",
+        "p": "Button, port and speaker cutouts are aligned to each phone model for a secure, responsive fit."
+      }
     ],
-    "compat": { "img": "scene-daily.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "scene-daily.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "feature1", "alt": "Gaucho silhouette line art close-up" },
-      { "key": "feature2", "alt": "Mate gourd detail close-up" },
-      { "key": "button-detail", "alt": "Button and port cutout close-up" },
-      { "key": "material", "alt": "Gold line-art over glitter resin close-up" },
-      { "key": "structure", "alt": "Electroplated camera frame close-up" },
-      { "key": "detail-cutout", "alt": "Precise cutout detail" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "scene-culture", "alt": "Scene styled around Argentine culture" },
-      { "key": "scene-daily", "alt": "Case styled for daily wear" },
-      { "key": "scene-social", "alt": "Case styled in a social setting" },
-      { "key": "aftersale", "alt": "After-sale and quality assurance" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "feature1",
+        "alt": "Gaucho silhouette line art close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Mate gourd detail close-up"
+      },
+      {
+        "key": "button-detail",
+        "alt": "Button and port cutout close-up"
+      },
+      {
+        "key": "material",
+        "alt": "Gold line-art over glitter resin close-up"
+      },
+      {
+        "key": "structure",
+        "alt": "Electroplated camera frame close-up"
+      },
+      {
+        "key": "detail-cutout",
+        "alt": "Precise cutout detail"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Scene styled around Argentine culture"
+      },
+      {
+        "key": "scene-daily",
+        "alt": "Case styled for daily wear"
+      },
+      {
+        "key": "scene-social",
+        "alt": "Case styled in a social setting"
+      },
+      {
+        "key": "aftersale",
+        "alt": "After-sale and quality assurance"
+      }
     ]
   },
   {
@@ -220,29 +478,89 @@
     ],
     "craftHeading": "Embossed, not printed.",
     "craft": [
-      { "img": "embossed.jpg", "h": "Same-Colour 3D Relief", "p": "The full pattern is pressed into the shell in the shell's own colour — a dimensional texture you feel, with no ink layer to fade, scratch off or peel." },
-      { "img": "protection.jpg", "h": "Raised Lip, Full Wrap", "p": "A raised camera lip and slim wrap-around edge cover the corners and lenses, with button covers and port cutouts cut to each phone model." }
+      {
+        "img": "embossed.jpg",
+        "h": "Same-Colour 3D Relief",
+        "p": "The full pattern is pressed into the shell in the shell's own colour — a dimensional texture you feel, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Raised Lip, Full Wrap",
+        "p": "A raised camera lip and slim wrap-around edge cover the corners and lenses, with button covers and port cutouts cut to each phone model."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "meaning.jpg", "h": "Four Mesoamerican Motifs", "p": "Stepped pyramid, sun stone, stepped fret and diamond lattice, combined into one continuous field of relief." },
-      { "img": "texture.jpg", "h": "Wheat-Straw Matte Finish", "p": "Natural wheat straw and a biodegradable base give a soft-matte, lightly textured surface with fine natural bran flecks." },
-      { "img": "colors.jpg", "h": "Eight Colourways", "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour." }
+      {
+        "img": "meaning.jpg",
+        "h": "Four Mesoamerican Motifs",
+        "p": "Stepped pyramid, sun stone, stepped fret and diamond lattice, combined into one continuous field of relief."
+      },
+      {
+        "img": "texture.jpg",
+        "h": "Wheat-Straw Matte Finish",
+        "p": "Natural wheat straw and a biodegradable base give a soft-matte, lightly textured surface with fine natural bran flecks."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Eight Colourways",
+        "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour."
+      }
     ],
-    "compat": { "img": "sizes.jpg", "heading": "Fits iPhone 11 – 18 series.", "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Aztec Geometry biodegradable case, front view" },
-      { "key": "texture", "alt": "Close-up of the same-colour geometric relief and wheat-bran speckle" },
-      { "key": "scene-culture", "alt": "Case styled with Mesoamerican stone and warm light" },
-      { "key": "scene-eco", "alt": "Case with dried wheat on natural linen" },
-      { "key": "colors", "alt": "Pink and yellow colourways shown together" },
-      { "key": "hold", "alt": "Case held in hand showing the textured grip" },
-      { "key": "meaning", "alt": "The four Aztec motifs and their meaning" },
-      { "key": "material", "alt": "Wheat-straw material and eco specs" },
-      { "key": "embossed", "alt": "Macro of the embossed, not printed, relief" },
-      { "key": "protection", "alt": "Raised camera lip and port cutouts" },
-      { "key": "lifestyle", "alt": "Case on a wooden desk with coffee and a plant" },
-      { "key": "sizes", "alt": "Colour range and iPhone 11–18 compatibility" }
+      {
+        "key": "main",
+        "alt": "Aztec Geometry biodegradable case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the same-colour geometric relief and wheat-bran speckle"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Mesoamerican stone and warm light"
+      },
+      {
+        "key": "scene-eco",
+        "alt": "Case with dried wheat on natural linen"
+      },
+      {
+        "key": "colors",
+        "alt": "Pink and yellow colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the textured grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "The four Aztec motifs and their meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Wheat-straw material and eco specs"
+      },
+      {
+        "key": "embossed",
+        "alt": "Macro of the embossed, not printed, relief"
+      },
+      {
+        "key": "protection",
+        "alt": "Raised camera lip and port cutouts"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case on a wooden desk with coffee and a plant"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
     ]
   },
   {
@@ -268,29 +586,89 @@
     ],
     "craftHeading": "Embossed, not printed.",
     "craft": [
-      { "img": "embossed.jpg", "h": "One Creature, In Relief", "p": "The whole alebrije is pressed into the shell in its own colour — a dimensional texture with no ink layer to fade or peel." },
-      { "img": "protection.jpg", "h": "Raised Lip, Full Wrap", "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model." }
+      {
+        "img": "embossed.jpg",
+        "h": "One Creature, In Relief",
+        "p": "The whole alebrije is pressed into the shell in its own colour — a dimensional texture with no ink layer to fade or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Raised Lip, Full Wrap",
+        "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "meaning.jpg", "h": "The Legend of the Alebrije", "p": "Dream-born creature, spirit guide (nahual), many animals in one, and the intricate linework of a culture that celebrates life." },
-      { "img": "texture.jpg", "h": "Wheat-Straw Matte Finish", "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks." },
-      { "img": "colors.jpg", "h": "Eight Colourways", "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour." }
+      {
+        "img": "meaning.jpg",
+        "h": "The Legend of the Alebrije",
+        "p": "Dream-born creature, spirit guide (nahual), many animals in one, and the intricate linework of a culture that celebrates life."
+      },
+      {
+        "img": "texture.jpg",
+        "h": "Wheat-Straw Matte Finish",
+        "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Eight Colourways",
+        "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour."
+      }
     ],
-    "compat": { "img": "sizes.jpg", "heading": "Fits iPhone 11 – 18 series.", "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Alebrijes Art biodegradable case, front view" },
-      { "key": "texture", "alt": "Close-up of the same-colour alebrije relief and wheat-bran speckle" },
-      { "key": "scene-culture", "alt": "Case styled with papel picado, marigolds and a carved alebrije figure" },
-      { "key": "scene-eco", "alt": "Case with dried wheat on natural linen" },
-      { "key": "colors", "alt": "Two colourways shown together" },
-      { "key": "hold", "alt": "Case held in hand showing the textured grip" },
-      { "key": "meaning", "alt": "The four ideas behind the alebrije motif" },
-      { "key": "material", "alt": "Wheat-straw material and eco specs" },
-      { "key": "embossed", "alt": "Macro of the embossed, not printed, relief" },
-      { "key": "protection", "alt": "Raised camera lip and port cutouts" },
-      { "key": "lifestyle", "alt": "Case on a wooden desk with coffee and a plant" },
-      { "key": "sizes", "alt": "Colour range and iPhone 11–18 compatibility" }
+      {
+        "key": "main",
+        "alt": "Alebrijes Art biodegradable case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the same-colour alebrije relief and wheat-bran speckle"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with papel picado, marigolds and a carved alebrije figure"
+      },
+      {
+        "key": "scene-eco",
+        "alt": "Case with dried wheat on natural linen"
+      },
+      {
+        "key": "colors",
+        "alt": "Two colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the textured grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "The four ideas behind the alebrije motif"
+      },
+      {
+        "key": "material",
+        "alt": "Wheat-straw material and eco specs"
+      },
+      {
+        "key": "embossed",
+        "alt": "Macro of the embossed, not printed, relief"
+      },
+      {
+        "key": "protection",
+        "alt": "Raised camera lip and port cutouts"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case on a wooden desk with coffee and a plant"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
     ]
   },
   {
@@ -316,29 +694,89 @@
     ],
     "craftHeading": "Embossed, not printed.",
     "craft": [
-      { "img": "embossed.jpg", "h": "Stitch-Fine Relief", "p": "Flowers, vines and the hummingbird are pressed into the shell in its own colour — a dimensional texture with no ink to fade or peel." },
-      { "img": "protection.jpg", "h": "Raised Lip, Full Wrap", "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model." }
+      {
+        "img": "embossed.jpg",
+        "h": "Stitch-Fine Relief",
+        "p": "Flowers, vines and the hummingbird are pressed into the shell in its own colour — a dimensional texture with no ink to fade or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Raised Lip, Full Wrap",
+        "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "meaning.jpg", "h": "The Story in the Stitches", "p": "Flowers as abundance and pride, the hummingbird as a messenger of joy and love, and hand-embroidery as patience passed down." },
-      { "img": "texture.jpg", "h": "Wheat-Straw Matte Finish", "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks." },
-      { "img": "colors.jpg", "h": "Eight Colourways", "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour." }
+      {
+        "img": "meaning.jpg",
+        "h": "The Story in the Stitches",
+        "p": "Flowers as abundance and pride, the hummingbird as a messenger of joy and love, and hand-embroidery as patience passed down."
+      },
+      {
+        "img": "texture.jpg",
+        "h": "Wheat-Straw Matte Finish",
+        "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Eight Colourways",
+        "p": "Pink, yellow, black, white, green, blue, red and dark green — the same relief on every colour."
+      }
     ],
-    "compat": { "img": "sizes.jpg", "heading": "Fits iPhone 11 – 18 series.", "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Floral Embroidery biodegradable case, front view" },
-      { "key": "texture", "alt": "Close-up of the same-colour floral relief and wheat-bran speckle" },
-      { "key": "scene-culture", "alt": "Case styled with embroidery hoops, coloured thread and fresh flowers" },
-      { "key": "scene-eco", "alt": "Case with dried wheat on natural linen" },
-      { "key": "colors", "alt": "Two colourways shown together" },
-      { "key": "hold", "alt": "Case held in hand showing the textured grip" },
-      { "key": "meaning", "alt": "The four ideas behind the embroidery motif" },
-      { "key": "material", "alt": "Wheat-straw material and eco specs" },
-      { "key": "embossed", "alt": "Macro of the embossed, not printed, relief" },
-      { "key": "protection", "alt": "Raised camera lip and port cutouts" },
-      { "key": "lifestyle", "alt": "Case on a wooden desk with coffee and a plant" },
-      { "key": "sizes", "alt": "Colour range and iPhone 11–18 compatibility" }
+      {
+        "key": "main",
+        "alt": "Floral Embroidery biodegradable case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the same-colour floral relief and wheat-bran speckle"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with embroidery hoops, coloured thread and fresh flowers"
+      },
+      {
+        "key": "scene-eco",
+        "alt": "Case with dried wheat on natural linen"
+      },
+      {
+        "key": "colors",
+        "alt": "Two colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the textured grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "The four ideas behind the embroidery motif"
+      },
+      {
+        "key": "material",
+        "alt": "Wheat-straw material and eco specs"
+      },
+      {
+        "key": "embossed",
+        "alt": "Macro of the embossed, not printed, relief"
+      },
+      {
+        "key": "protection",
+        "alt": "Raised camera lip and port cutouts"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case on a wooden desk with coffee and a plant"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
     ]
   },
   {
@@ -364,29 +802,89 @@
     ],
     "craftHeading": "Carved to endure.",
     "craft": [
-      { "img": "embossed.jpg", "h": "Same-Colour 3D Relief", "p": "Glyphs and serpent are pressed into the shell in its own colour — a dimensional, stone-carved texture with no ink to fade or peel." },
-      { "img": "protection.jpg", "h": "Raised Lip, Full Wrap", "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model." }
+      {
+        "img": "embossed.jpg",
+        "h": "Same-Colour 3D Relief",
+        "p": "Glyphs and serpent are pressed into the shell in its own colour — a dimensional, stone-carved texture with no ink to fade or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Raised Lip, Full Wrap",
+        "p": "Raised camera lip and slim wrap-around edge protect corners and lenses; button covers and ports cut to each model."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "meaning.jpg", "h": "Glyphs & the Feathered Serpent", "p": "Writing carved to outlast its makers, Kukulkan joining earth and sky, day-signs as name and destiny, and cyclical renewal." },
-      { "img": "texture.jpg", "h": "Wheat-Straw Matte Finish", "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks." },
-      { "img": "colors.jpg", "h": "Eight Colourways", "p": "Pink, yellow, black, white, green, blue, red and dark green — black reads especially sculptural." }
+      {
+        "img": "meaning.jpg",
+        "h": "Glyphs & the Feathered Serpent",
+        "p": "Writing carved to outlast its makers, Kukulkan joining earth and sky, day-signs as name and destiny, and cyclical renewal."
+      },
+      {
+        "img": "texture.jpg",
+        "h": "Wheat-Straw Matte Finish",
+        "p": "Natural wheat straw and a biodegradable base — soft-matte, lightly textured, with fine natural bran flecks."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Eight Colourways",
+        "p": "Pink, yellow, black, white, green, blue, red and dark green — black reads especially sculptural."
+      }
     ],
-    "compat": { "img": "sizes.jpg", "heading": "Fits iPhone 11 – 18 series.", "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups. Tell us the models and colourways you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Mayan Glyphs biodegradable case, front view" },
-      { "key": "texture", "alt": "Close-up of the same-colour glyph relief and wheat-bran speckle" },
-      { "key": "scene-culture", "alt": "Case styled with carved Maya stone and a pyramid at golden hour" },
-      { "key": "scene-eco", "alt": "Case with dried wheat on natural linen" },
-      { "key": "colors", "alt": "Black and coral-red colourways shown together" },
-      { "key": "hold", "alt": "Case held in hand showing the textured grip" },
-      { "key": "meaning", "alt": "The four ideas behind the Maya glyph motif" },
-      { "key": "material", "alt": "Wheat-straw material and eco specs" },
-      { "key": "embossed", "alt": "Macro of the embossed, not printed, relief" },
-      { "key": "protection", "alt": "Raised camera lip and port cutouts" },
-      { "key": "lifestyle", "alt": "Case on a wooden desk with coffee and a plant" },
-      { "key": "sizes", "alt": "Colour range and iPhone 11–18 compatibility" }
+      {
+        "key": "main",
+        "alt": "Mayan Glyphs biodegradable case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the same-colour glyph relief and wheat-bran speckle"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with carved Maya stone and a pyramid at golden hour"
+      },
+      {
+        "key": "scene-eco",
+        "alt": "Case with dried wheat on natural linen"
+      },
+      {
+        "key": "colors",
+        "alt": "Black and coral-red colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the textured grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "The four ideas behind the Maya glyph motif"
+      },
+      {
+        "key": "material",
+        "alt": "Wheat-straw material and eco specs"
+      },
+      {
+        "key": "embossed",
+        "alt": "Macro of the embossed, not printed, relief"
+      },
+      {
+        "key": "protection",
+        "alt": "Raised camera lip and port cutouts"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case on a wooden desk with coffee and a plant"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
     ]
   },
   {
@@ -412,31 +910,97 @@
     ],
     "craftHeading": "Built to protect, cast to impress.",
     "craft": [
-      { "img": "material.jpg", "h": "Rhinestone-Set Fan Pattern", "p": "Every fan arc is outlined in gold and lined with fine rhinestones, set by hand along the curve rather than scattered — the density of stones is consistent from piece to piece." },
-      { "img": "structure.jpg", "h": "Precision Camera & Button Cutouts", "p": "An electroplated metal-effect frame sits flush around the camera module, keeping lenses clear of glare while the raised edge protects against scratches. Button and port cutouts are cut to each phone model's exact layout." }
+      {
+        "img": "material.jpg",
+        "h": "Rhinestone-Set Fan Pattern",
+        "p": "Every fan arc is outlined in gold and lined with fine rhinestones, set by hand along the curve rather than scattered — the density of stones is consistent from piece to piece."
+      },
+      {
+        "img": "structure.jpg",
+        "h": "Precision Camera & Button Cutouts",
+        "p": "An electroplated metal-effect frame sits flush around the camera module, keeping lenses clear of glare while the raised edge protects against scratches. Button and port cutouts are cut to each phone model's exact layout."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature1.jpg", "h": "Art Deco Geometry", "p": "A continuous fan-shaped motif drawn from 1920s Art Deco design, built on symmetry and repetition rather than a single decorative motif." },
-      { "img": "feature2.jpg", "h": "Blue & Gold Rhinestone", "p": "Slate-blue and gold in high contrast, with rhinestones set directly into the gold linework for a jewelry-like finish." },
-      { "img": "feature3.jpg", "h": "Drifting Glitter Resin", "p": "Fine glitter and star sequins sit inside the clear resin layer beneath the pattern, catching light as the case moves." }
+      {
+        "img": "feature1.jpg",
+        "h": "Art Deco Geometry",
+        "p": "A continuous fan-shaped motif drawn from 1920s Art Deco design, built on symmetry and repetition rather than a single decorative motif."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Blue & Gold Rhinestone",
+        "p": "Slate-blue and gold in high contrast, with rhinestones set directly into the gold linework for a jewelry-like finish."
+      },
+      {
+        "img": "feature3.jpg",
+        "h": "Drifting Glitter Resin",
+        "p": "Fine glitter and star sequins sit inside the clear resin layer beneath the pattern, catching light as the case moves."
+      }
     ],
-    "compat": { "img": "compat.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "compat.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot on a marble table" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "material", "alt": "Close-up of rhinestone-set gold fan pattern" },
-      { "key": "structure", "alt": "Case in hand showing camera frame and cutouts" },
-      { "key": "glitter", "alt": "Glitter and star sequin effect close-up" },
-      { "key": "detail-cutout", "alt": "Precise camera cutout detail" },
-      { "key": "compat", "alt": "Multi-model compatibility illustration" },
-      { "key": "scene1", "alt": "Case styled for an evening social setting" },
-      { "key": "scene2", "alt": "Case styled as a still life on a vanity table" },
-      { "key": "scene3", "alt": "Case in an evening luxury usage scene" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "feature1", "alt": "Art Deco geometric texture close-up" },
-      { "key": "feature2", "alt": "Blue and gold rhinestone close-up" },
-      { "key": "feature3", "alt": "Drifting glitter resin close-up" }
+      {
+        "key": "main",
+        "alt": "Main product shot on a marble table"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "material",
+        "alt": "Close-up of rhinestone-set gold fan pattern"
+      },
+      {
+        "key": "structure",
+        "alt": "Case in hand showing camera frame and cutouts"
+      },
+      {
+        "key": "glitter",
+        "alt": "Glitter and star sequin effect close-up"
+      },
+      {
+        "key": "detail-cutout",
+        "alt": "Precise camera cutout detail"
+      },
+      {
+        "key": "compat",
+        "alt": "Multi-model compatibility illustration"
+      },
+      {
+        "key": "scene1",
+        "alt": "Case styled for an evening social setting"
+      },
+      {
+        "key": "scene2",
+        "alt": "Case styled as a still life on a vanity table"
+      },
+      {
+        "key": "scene3",
+        "alt": "Case in an evening luxury usage scene"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "feature1",
+        "alt": "Art Deco geometric texture close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Blue and gold rhinestone close-up"
+      },
+      {
+        "key": "feature3",
+        "alt": "Drifting glitter resin close-up"
+      }
     ]
   },
   {
@@ -462,31 +1026,97 @@
     ],
     "craftHeading": "Printed, not glued — built to last.",
     "craft": [
-      { "img": "material.jpg", "h": "Printed 3D Bow", "p": "The signature bow is created with colorful printing technology rather than a glued-on accessory, so the surface stays smooth and snag-free." },
-      { "img": "structure.jpg", "h": "Camera & Port Protection", "p": "A raised camera edge and precisely cut ports and buttons keep the case functional without breaking the aesthetic." }
+      {
+        "img": "material.jpg",
+        "h": "Printed 3D Bow",
+        "p": "The signature bow is created with colorful printing technology rather than a glued-on accessory, so the surface stays smooth and snag-free."
+      },
+      {
+        "img": "structure.jpg",
+        "h": "Camera & Port Protection",
+        "p": "A raised camera edge and precisely cut ports and buttons keep the case functional without breaking the aesthetic."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "feature1.jpg", "h": "3D Bow, Printed Not Glued", "p": "A signature bow produced with colorful printing technology — smooth, snag-free, and won't peel or lift over time." },
-      { "img": "feature2.jpg", "h": "Pearl & Lace Detail", "p": "Soft pearl accents and a fine lace motif add a vintage note to the sweet, pastel palette." },
-      { "img": "feature3.jpg", "h": "Wide Model Fit", "p": "Cut to fit a wide range of current iPhone and Samsung models, so one design covers nearly every customer's phone." }
+      {
+        "img": "feature1.jpg",
+        "h": "3D Bow, Printed Not Glued",
+        "p": "A signature bow produced with colorful printing technology — smooth, snag-free, and won't peel or lift over time."
+      },
+      {
+        "img": "feature2.jpg",
+        "h": "Pearl & Lace Detail",
+        "p": "Soft pearl accents and a fine lace motif add a vintage note to the sweet, pastel palette."
+      },
+      {
+        "img": "feature3.jpg",
+        "h": "Wide Model Fit",
+        "p": "Cut to fit a wide range of current iPhone and Samsung models, so one design covers nearly every customer's phone."
+      }
     ],
-    "compat": { "img": "compat.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "compat.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "hero", "alt": "Detail page hero visual" },
-      { "key": "feature1", "alt": "3D printed bow close-up" },
-      { "key": "feature2", "alt": "Pearl, lace and pastel color close-up" },
-      { "key": "feature3", "alt": "Multi-model compatibility close-up" },
-      { "key": "material", "alt": "Printed bow surface texture close-up" },
-      { "key": "structure", "alt": "Camera protection and cutout close-up" },
-      { "key": "icons", "alt": "Icon summary of key selling points" },
-      { "key": "scene-daily", "alt": "Case styled for daily outfit wear" },
-      { "key": "scene-gift", "alt": "Case styled as a gift" },
-      { "key": "scene-gift2", "alt": "Case styled for gift-giving scenario" },
-      { "key": "multi-angle", "alt": "Multi-angle detail view" },
-      { "key": "aftersale", "alt": "After-sale and quality assurance" },
-      { "key": "compat", "alt": "Multi-model compatibility" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "hero",
+        "alt": "Detail page hero visual"
+      },
+      {
+        "key": "feature1",
+        "alt": "3D printed bow close-up"
+      },
+      {
+        "key": "feature2",
+        "alt": "Pearl, lace and pastel color close-up"
+      },
+      {
+        "key": "feature3",
+        "alt": "Multi-model compatibility close-up"
+      },
+      {
+        "key": "material",
+        "alt": "Printed bow surface texture close-up"
+      },
+      {
+        "key": "structure",
+        "alt": "Camera protection and cutout close-up"
+      },
+      {
+        "key": "icons",
+        "alt": "Icon summary of key selling points"
+      },
+      {
+        "key": "scene-daily",
+        "alt": "Case styled for daily outfit wear"
+      },
+      {
+        "key": "scene-gift",
+        "alt": "Case styled as a gift"
+      },
+      {
+        "key": "scene-gift2",
+        "alt": "Case styled for gift-giving scenario"
+      },
+      {
+        "key": "multi-angle",
+        "alt": "Multi-angle detail view"
+      },
+      {
+        "key": "aftersale",
+        "alt": "After-sale and quality assurance"
+      },
+      {
+        "key": "compat",
+        "alt": "Multi-model compatibility"
+      }
     ]
   },
   {
@@ -512,26 +1142,1589 @@
     ],
     "craftHeading": "Real petals, sealed in resin.",
     "craft": [
-      { "img": "detail.jpg", "h": "Real Pressed Petals", "p": "Genuine dried flower petals are sealed into the clear resin layer, not printed — every unit carries slight, natural variation." },
-      { "img": "gift-box.jpg", "h": "Gift-Ready Presentation", "p": "The soft, romantic palette and floral subject make this a natural fit for gift-focused retail, not just everyday carry." }
+      {
+        "img": "detail.jpg",
+        "h": "Real Pressed Petals",
+        "p": "Genuine dried flower petals are sealed into the clear resin layer, not printed — every unit carries slight, natural variation."
+      },
+      {
+        "img": "gift-box.jpg",
+        "h": "Gift-Ready Presentation",
+        "p": "The soft, romantic palette and floral subject make this a natural fit for gift-focused retail, not just everyday carry."
+      }
     ],
     "featureHeading": "Three details that carry the design.",
     "features": [
-      { "img": "gallery4.jpg", "h": "Red & Blue Contrast", "p": "Warm red petals and cooler blue blossoms sit together for a design that reads as both passionate and calm." },
-      { "img": "gallery5.jpg", "h": "Silver Star Accents", "p": "Fine silver stars are scattered through the resin, adding a quiet, dreamlike detail beneath the floral pattern." },
-      { "img": "lifestyle.jpg", "h": "Everyday & Gifting", "p": "A romantic, nature-driven design suited to daily use as much as gifting — no cultural iconography required." }
+      {
+        "img": "gallery4.jpg",
+        "h": "Red & Blue Contrast",
+        "p": "Warm red petals and cooler blue blossoms sit together for a design that reads as both passionate and calm."
+      },
+      {
+        "img": "gallery5.jpg",
+        "h": "Silver Star Accents",
+        "p": "Fine silver stars are scattered through the resin, adding a quiet, dreamlike detail beneath the floral pattern."
+      },
+      {
+        "img": "lifestyle.jpg",
+        "h": "Everyday & Gifting",
+        "p": "A romantic, nature-driven design suited to daily use as much as gifting — no cultural iconography required."
+      }
     ],
-    "compat": { "img": "gallery8.jpg", "heading": "Cut for hundreds of models.", "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling." },
+    "compat": {
+      "img": "gallery8.jpg",
+      "heading": "Cut for hundreds of models.",
+      "text": "This design is produced across the current iPhone and Samsung lineups on request — tell us the models you need and we'll confirm exact fit before sampling."
+    },
     "images": [
-      { "key": "main", "alt": "Main product shot" },
-      { "key": "gallery2", "alt": "Case presented in gift packaging" },
-      { "key": "detail", "alt": "Pressed petal and resin detail close-up" },
-      { "key": "gallery4", "alt": "Red and blue petal color close-up" },
-      { "key": "gallery5", "alt": "Silver star glitter accent close-up" },
-      { "key": "gallery7", "alt": "Additional product detail view" },
-      { "key": "gallery8", "alt": "Additional product detail view" },
-      { "key": "lifestyle", "alt": "Case used in an everyday lifestyle setting" },
-      { "key": "gallery10", "alt": "Additional product detail view" }
+      {
+        "key": "main",
+        "alt": "Main product shot"
+      },
+      {
+        "key": "gallery2",
+        "alt": "Case presented in gift packaging"
+      },
+      {
+        "key": "detail",
+        "alt": "Pressed petal and resin detail close-up"
+      },
+      {
+        "key": "gallery4",
+        "alt": "Red and blue petal color close-up"
+      },
+      {
+        "key": "gallery5",
+        "alt": "Silver star glitter accent close-up"
+      },
+      {
+        "key": "gallery7",
+        "alt": "Additional product detail view"
+      },
+      {
+        "key": "gallery8",
+        "alt": "Additional product detail view"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case used in an everyday lifestyle setting"
+      },
+      {
+        "key": "gallery10",
+        "alt": "Additional product detail view"
+      }
+    ]
+  },
+  {
+    "slug": "catrina-calavera-silicone",
+    "sku": "DYF2456",
+    "name": "Catrina Calavera Silicone Case",
+    "collection": "mexico",
+    "order": 110,
+    "assetDir": "catrina-calavera-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "An elegant La Catrina sugar-skull portrait, framed by a marigold flower crown and lace-like linework, laser-engraved in tonal contrast into a soft-touch silicone shell.",
+    "metaDescription": "Catrina Calavera Silicone Case (#DYF2456): La Catrina sugar-skull motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "La Catrina sugar-skull motif laser-engraved in tonal contrast into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "La Catrina's sugar-skull portrait, framed in a marigold crown and lace-like linework — Mexico's best-known Día de los Muertos icon, honouring death with colour and ceremony rather than fear.",
+    "story": [
+      "This case carries La Catrina — the elegant sugar-skull figure that has become Mexico's most recognised Día de los Muertos icon. First drawn by printmaker José Guadalupe Posada and later popularised by muralist Diego Rivera, she embodies a distinctly Mexican view of death: met with colour, ceremony and humour rather than fear. Here she's framed by a marigold flower crown, with lace-like linework covering the whole skull.",
+      "Nothing on this case is printed. The full design is laser-engraved directly into the liquid silicone shell in its own colour, so it reads as a fine tonal texture rather than ink — it won't fade, crack or peel, and it's completely smooth to the touch. Inside, a soft fleece lining protects the phone's back panel and camera lenses, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Built for retailers and gift buyers serving Mexico's Día de los Muertos season and the wider Latin American market — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "La Catrina, Día de los Muertos Icon",
+        "p": "The sugar-skull portrait popularised by José Guadalupe Posada and Diego Rivera, framed in a marigold flower crown — Mexico's best-known symbol of honouring the dead with colour rather than fear."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Catrina Calavera silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled for Día de los Muertos"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "papel-picado-silicone",
+    "sku": "DYF2457",
+    "name": "Papel Picado Silicone Case",
+    "collection": "mexico",
+    "order": 120,
+    "assetDir": "papel-picado-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A traditional Mexican cut-paper banner pattern — flowers, birds and scalloped borders — laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Papel Picado Silicone Case (#DYF2457): Mexican cut-paper banner motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Papel picado cut-paper banner motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Papel picado's perforated banner motif, echoing Mexico's festival and wedding decorations — a cut-paper craft whose own logic of removing material to reveal a pattern maps naturally onto laser engraving.",
+    "story": [
+      "Papel picado — Mexico's traditional perforated paper banner — shows up at festivals, weddings and Día de los Muertos altars across the country. This case translates its scalloped-edge banner shape and floral, bird and geometric cut-outs into pure linework: the same act of removing material to reveal a pattern that defines the paper craft is, here, what a laser does to a silicone shell.",
+      "The design is laser-engraved directly into the shell in its own colour, not printed — a fine tonal texture that won't fade, crack or peel, and reads as completely smooth under the fingertip. A soft fleece lining protects the phone's back panel and camera from scratches, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Suited to buyers serving Mexico's festival, wedding and gift-shop trade, where the papel picado look already carries strong recognition — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Papel Picado, Festival Cut-Paper Art",
+        "p": "Mexico's traditional perforated paper banner, seen at weddings, festivals and Día de los Muertos altars — its cut-out floral and geometric borders translated into pure engraved linework."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Papel Picado silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with festival paper banners"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "talavera-tile-silicone",
+    "sku": "DYF2458",
+    "name": "Talavera Tile Silicone Case",
+    "collection": "mexico",
+    "order": 130,
+    "assetDir": "talavera-tile-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A symmetrical Talavera ceramic-tile pattern from Puebla, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Talavera Tile Silicone Case (#DYF2458): Puebla Talavera ceramic-tile motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Talavera ceramic-tile motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "A Talavera-style floral medallion and geometric border, referencing Puebla's UNESCO-listed glazed-ceramic craft — one of the most recognisable handmade-Mexico visual signatures.",
+    "story": [
+      "Talavera is Puebla's centuries-old glazed-ceramic craft, added to UNESCO's Intangible Cultural Heritage list in 2019, and one of the most instantly recognisable expressions of Mexican handmade design — found on tiles across homes, courtyards and building facades nationwide. This case renders a classic Talavera composition, a symmetrical floral medallion inside a geometric border, as engraved linework.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, so it reads as a fine tonal texture that won't fade, chip or peel, and stays completely smooth to the touch. Inside, a soft fleece lining guards the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A fit for buyers who want a recognisably “Mexican handmade” design without relying on a flag or a fandom — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Talavera, Puebla's UNESCO Ceramic Craft",
+        "p": "A symmetrical floral medallion inside a geometric border, in the style of Puebla's centuries-old glazed Talavera pottery — recognised by UNESCO as Intangible Cultural Heritage in 2019."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Talavera Tile silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Puebla ceramic tiles"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "lucha-libre-mask-silicone",
+    "sku": "DYF2459",
+    "name": "Lucha Libre Mask Silicone Case",
+    "collection": "mexico",
+    "order": 140,
+    "assetDir": "lucha-libre-mask-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A bold, symmetrical lucha libre wrestling mask with radiating lightning-bolt and star details, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Lucha Libre Mask Silicone Case (#DYF2459): Mexican wrestling mask motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Lucha libre wrestling mask motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "A front-facing lucha libre mask design — the identity a Mexican wrestler builds a career around — rendered as bold engraved linework for a younger, street-culture audience.",
+    "story": [
+      "In Mexican lucha libre, the mask isn't a costume piece — it's identity. Some wrestlers never appear unmasked in public for their entire careers. This case takes that front-facing mask silhouette, with its angular eye and mouth cut-outs and radiating lightning-bolt and star details, and renders it as one of the most globally recognisable pieces of Mexican pop culture.",
+      "The design is laser-engraved directly into the shell in its own colour rather than printed, so it holds as a fine tonal texture that won't fade, scratch off or peel, and stays completely smooth under the finger. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Aimed at a younger, street-culture-leaning customer rather than a folk-art buyer — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Lucha Libre, A Wrestler's Identity",
+        "p": "The front-facing mask that defines a lucha libre wrestler's public identity — for some, worn for an entire career — making it one of the most globally recognisable Mexican pop-culture symbols."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Lucha Libre Mask silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with a lucha libre wrestling arena scene"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "sarape-stripe-silicone",
+    "sku": "DYF2460",
+    "name": "Sarape Stripe Silicone Case",
+    "collection": "mexico",
+    "order": 150,
+    "assetDir": "sarape-stripe-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A Saltillo sarape-blanket stripe pattern — central diamond medallion and zigzag bands — laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Sarape Stripe Silicone Case (#DYF2460): Saltillo sarape blanket motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Sarape blanket-inspired geometric stripe motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "A Saltillo sarape blanket's central diamond medallion and zigzag stripe bands, translated from a woven textile into pure engraved linework.",
+    "story": [
+      "The sarape from Saltillo is one of Mexico's best-known textiles — a woven blanket built around a central diamond medallion flanked by symmetrical zigzag and chevron stripes. Originally carried entirely by contrasting colour, the composition is translated here into pure linework, keeping the structure while suiting the smaller, single-tone canvas of a phone case back.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, holding as a fine tonal texture that won't fade, crack or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Suited to buyers who want Mexican textile craft represented without a flag or fandom attached — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Sarape, Saltillo's Woven Textile Craft",
+        "p": "A central diamond medallion flanked by symmetrical zigzag stripes, in the structure of a traditional Saltillo sarape blanket — one of Mexico's most recognised handwoven textiles."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Sarape Stripe silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with handwoven textile"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "cempasuchil-marigold-silicone",
+    "sku": "DYF2461",
+    "name": "Cempasúchil Marigold Silicone Case",
+    "collection": "mexico",
+    "order": 160,
+    "assetDir": "cempasuchil-marigold-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "Layered cempasúchil marigold blooms with trailing stems, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Cempasúchil Marigold Silicone Case (#DYF2461): marigold flower motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Cempasúchil marigold botanical motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Cempasúchil, the marigold that guides spirits home during Día de los Muertos — rendered as layered petal linework, a specific and story-carrying alternative to a generic floral print.",
+    "story": [
+      "Cempasúchil — the marigold of Día de los Muertos — is laid in paths and altars across Mexico every year, believed to guide the spirits of the dead back home with its colour and scent. This case focuses tightly on the flower itself: layered blooms, detailed petal linework and trailing stems, rather than a generic floral pattern.",
+      "The design is laser-engraved directly into the shell in its own colour instead of printed, so it holds as a fine tonal texture that won't fade, chip or peel, and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A natural fit for Día de los Muertos season and gift-giving occasions built around remembrance and reunion — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Cempasúchil, the Flower That Guides Spirits Home",
+        "p": "The marigold of Día de los Muertos, laid in paths and altars to guide the spirits of the dead back home — one of Mexico's most specific and meaning-carrying flowers."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Cempasúchil Marigold silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled for Día de los Muertos with marigold flowers"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "milagros-folk-charms-silicone",
+    "sku": "DYF2462",
+    "name": "Milagros Folk Charms Silicone Case",
+    "collection": "mexico",
+    "order": 170,
+    "assetDir": "milagros-folk-charms-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "Sacred heart, protective eye, open hand and dove milagros charms, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Milagros Folk Charms Silicone Case (#DYF2462): Mexican votive charm motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Milagros folk charm motifs (sacred heart, protective eye, open hand, dove) laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Milagros — the small votive charms Mexican Catholics leave at church altars for protection and blessing — arranged as an engraved pattern that carries an emotional charge beyond decoration.",
+    "story": [
+      "Milagros are the small votive charms left at church altars across Mexico — hearts, eyes, hands and doves offered in thanks or in hope of protection and blessing. This case arranges four of the most recognisable forms, sacred heart, protective eye, open hand and dove, each with fine radiating linework, so the phone case itself reads as a charm carried every day.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, holding as a fine tonal texture that won't fade, scratch off or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Built for buyers who want a design with genuine emotional pull rather than pure decoration — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Milagros, Votive Charms for Protection",
+        "p": "Sacred heart, protective eye, open hand and dove — traditional Mexican Catholic votive charms left at church altars in hope of blessing and protection."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Milagros Folk Charms silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with votive charm offerings"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "quetzalcoatl-silicone",
+    "sku": "DYF2463",
+    "name": "Quetzalcóatl Silicone Case",
+    "collection": "mexico",
+    "order": 180,
+    "assetDir": "quetzalcoatl-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A coiling feathered-serpent Quetzalcóatl design with geometric scale patterns and a quetzal-feather crest, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Quetzalcóatl Silicone Case (#DYF2463): feathered-serpent motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Quetzalcóatl feathered-serpent motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Quetzalcóatl, the feathered serpent worshipped across Mesoamerican civilisations as a god of wisdom, wind and life — a specific mythological figure rather than a generic geometric pattern.",
+    "story": [
+      "Quetzalcóatl, the feathered serpent, was worshipped across Mesoamerican civilisations as a god of wisdom, wind and life. This case fills the whole shell with a coiling rendering of the deity — geometric scale patterns across the serpent's body and a quetzal-feather crest — a more specific, story-driven symbol than a generic Aztec geometric pattern.",
+      "The design is laser-engraved directly into the shell in its own colour rather than printed, so it holds as a fine tonal texture that won't fade, crack or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Suited to buyers whose customers respond to Mesoamerican mythology and history rather than generic pattern work — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Quetzalcóatl, the Feathered Serpent",
+        "p": "A Mesoamerican deity of wisdom, wind and life, rendered coiling across the shell with geometric scale patterns and a quetzal-feather crest."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Quetzalcóatl silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Mesoamerican mythology setting"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "barro-negro-silicone",
+    "sku": "DYF2464",
+    "name": "Barro Negro Silicone Case",
+    "collection": "mexico",
+    "order": 190,
+    "assetDir": "barro-negro-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "An Oaxacan barro negro pottery motif — a bird among swirling floral vines — laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Barro Negro Silicone Case (#DYF2464): Oaxacan black-clay pottery motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Barro negro pottery motif laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Barro negro, Oaxaca's hand-carved black-clay pottery craft — a rustic bird-and-vine motif that gives the Mexico collection a second, more handmade texture alongside the refined Talavera tile design.",
+    "story": [
+      "Barro negro — Oaxaca's hand-carved black-clay pottery — is one of Mexico's most important craft traditions, its surfaces typically carved with birds, florals and geometric swirls in a rustic, hand-worked style. This case takes that same bird-among-vines motif and gives it a bolder, simpler line than a Talavera tile pattern, adding textural range to the collection.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, so it holds as a fine tonal texture that won't fade, chip or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A fit for buyers who want Mexican handmade craft represented with a more rustic, grounded character — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Barro Negro, Oaxaca's Black-Clay Craft",
+        "p": "A stylised bird perched among swirling floral vines, hand-carved in the rustic style of Oaxacan barro negro black-clay pottery — one of Mexico's most important craft traditions."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Barro Negro silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Oaxacan black-clay pottery"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "eagle-nopal-cactus-silicone",
+    "sku": "DYF2465",
+    "name": "Eagle & Nopal Cactus Silicone Case",
+    "collection": "mexico",
+    "order": 200,
+    "assetDir": "eagle-nopal-cactus-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "The eagle, serpent and nopal cactus from Mexico's national emblem, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Eagle & Nopal Cactus Silicone Case (#DYF2465): Mexican national emblem motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Eagle perched on a nopal cactus with serpent motif, inspired by the Mexican national emblem, laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "The eagle perched on a nopal cactus, serpent in its beak — the founding legend at the centre of Mexico's flag, and the most direct, least-explaining-required Mexican symbol there is.",
+    "story": [
+      "This design comes straight from the emblem at the centre of the Mexican flag: an eagle perched on a nopal cactus, a serpent in its beak, drawn from the Aztec founding legend of Tenochtitlan. It's the most direct expression of Mexican identity in the collection — detailed feather texture across the wings, fine thorn detail on the cactus paddle, and a heroic, dynamic pose.",
+      "The pattern is laser-engraved directly into the shell in its own colour rather than printed, holding as a fine tonal texture that won't fade, scratch off or peel and staying completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Built for buyers who want the single most recognisable, least-explaining-required Mexican symbol in their range — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Mexico's National Emblem",
+        "p": "An eagle perched on a nopal cactus with a serpent in its beak — the Aztec founding legend of Tenochtitlan, and the emblem at the centre of the Mexican flag."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Eagle & Nopal Cactus silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with the founding-legend emblem"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "aztec-geometry-silicone",
+    "sku": "DYF2466",
+    "name": "Aztec Geometry Silicone Case",
+    "collection": "mexico",
+    "order": 210,
+    "assetDir": "aztec-geometry-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A symmetrical Aztec geometric pattern of stepped frets and diamond motifs, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Aztec Geometry Silicone Case (#DYF2466): Aztec geometric motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Aztec geometric motif with symmetrical stepped fret and diamond patterns, laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Aztec stepped-fret and diamond geometry, drawn from stone carving and textile borders — the same motif as the collection's original wheat-straw design, rebuilt in liquid silicone.",
+    "story": [
+      "Aztec geometry runs through stone carving and textile borders across Mesoamerican design — symmetrical, repeating units built from stepped frets and diamonds. This case renders that vocabulary as one continuous engraved pattern, giving the collection's original wheat-straw Aztec Geometry design a second life in liquid silicone.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, so it holds as a fine tonal texture that won't fade, chip or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "Suited to a harder-edged, streetwear-leaning presentation of Mexican design — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Aztec Stepped-Fret Geometry",
+        "p": "Symmetrical, repeating stepped-fret and diamond units drawn from Aztec stone carving and textile borders — one of the most instantly recognisable Mesoamerican design vocabularies."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Aztec Geometry silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Aztec stone carving detail"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "alebrijes-art-silicone",
+    "sku": "DYF2467",
+    "name": "Alebrijes Art Silicone Case",
+    "collection": "mexico",
+    "order": 220,
+    "assetDir": "alebrijes-art-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "A whimsical alebrije fantastical creature, hybrid wings, scales and horns, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Alebrijes Art Silicone Case (#DYF2467): Mexican folk-art creature motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Alebrije fantastical creature motif combining wings, scales and horns, laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Alebrijes — Oaxaca's hand-carved fantastical spirit creatures, born from artist Pedro Linares's fever dream in the 1930s — rebuilt from the collection's wheat-straw original in liquid silicone.",
+    "story": [
+      "Alebrijes are Oaxaca's hand-carved, hand-painted fantastical creatures — hybrid animal forms combining wings, scales and horns, said to have first come to artist Pedro Linares in a fever dream in the 1930s. This case renders that folk-art energy as intricate engraved linework covering a single dynamic, curving creature, carrying the collection's original wheat-straw Alebrijes design into liquid silicone.",
+      "The design is laser-engraved directly into the shell in its own colour rather than printed, holding as a fine tonal texture that won't fade, scratch off or peel and staying completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A strong pick for a younger customer drawn to Mexican folk art's more surreal, imaginative side — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Alebrijes, Oaxacan Spirit Creatures",
+        "p": "Hybrid animal forms combining wings, scales and horns — Oaxaca's hand-carved folk-art creatures, said to have first appeared to artist Pedro Linares in a 1930s fever dream."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Alebrijes Art silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Oaxacan folk-art carving workshop"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "mayan-glyphs-silicone",
+    "sku": "DYF2468",
+    "name": "Mayan Glyphs Silicone Case",
+    "collection": "mexico",
+    "order": 230,
+    "assetDir": "mayan-glyphs-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "Ancient Mayan hieroglyphic and calendar symbols in a structured composition, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Mayan Glyphs Silicone Case (#DYF2468): Mayan hieroglyphic motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Mayan glyph and calendar motif with hieroglyphic symbols and circular calendar patterns, laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Mayan hieroglyphic and calendar symbols, carrying the weight of an ancient writing and timekeeping system — the collection's original wheat-straw Mayan Glyphs design, rebuilt in liquid silicone.",
+    "story": [
+      "Mayan hieroglyphics and calendar symbols carried knowledge, record-keeping and astronomy across one of Mesoamerica's most sophisticated civilisations. This case arranges hieroglyphic blocks and circular calendar motifs into a structured, stone-carving-style composition, giving the collection's original wheat-straw Mayan Glyphs design a second life in liquid silicone.",
+      "The pattern is laser-engraved directly into the shell in its own colour, not printed, so it holds as a fine tonal texture that won't fade, chip or peel and stays completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A fit for buyers whose customers respond to Mesoamerican history and civilisation more than decorative pattern alone — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Mayan Glyphs & Calendar Symbols",
+        "p": "Hieroglyphic blocks and circular calendar motifs, carrying the knowledge, record-keeping and astronomy of Mayan civilisation in a structured, stone-carving-style composition."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Mayan Glyphs silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with Mayan stelae carving"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
+    ]
+  },
+  {
+    "slug": "floral-embroidery-otomi-silicone",
+    "sku": "DYF2469",
+    "name": "Floral Embroidery Otomi Silicone Case",
+    "collection": "mexico",
+    "order": 240,
+    "assetDir": "floral-embroidery-otomi-silicone",
+    "materialTag": "Liquid Silicone · Laser-Engraved",
+    "material": "Soft-touch liquid silicone shell with a fleece-lined interior; same-colour laser-engraved pattern, completely smooth to the touch — not printed, embossed or raised",
+    "price": 0.8,
+    "moq": "200 pcs / model",
+    "leadTime": "15 Days",
+    "tagline": "An Otomi embroidery-inspired floral and bird pattern in continuous stitch-like linework, laser-engraved into a soft-touch silicone shell.",
+    "metaDescription": "Floral Embroidery Otomi Silicone Case (#DYF2469): Otomi embroidery floral motif laser-engraved on a fleece-lined liquid silicone shell, 6 colourways, fits iPhone 11–18. MOQ 200 pcs, lead time 15 days.",
+    "schemaDescription": "Otomi embroidery-inspired floral motif with birds and leaves in continuous flowing linework, laser-engraved into a soft-touch, fleece-lined liquid silicone phone case. Six colourways, fits iPhone 11–18.",
+    "card": "Otomi embroidery's flowing floral and bird linework, one of Mexico's best-loved textile looks abroad — the collection's original wheat-straw Floral Embroidery design, rebuilt in liquid silicone.",
+    "story": [
+      "Otomi embroidery is stitched in bold, high-saturation thread across traditional Mexican textiles, and is one of the country's most recognised and best-loved patterns abroad. This case carries that same continuous, flowing stitch-like linework — flowers, leaves and a bird woven through the composition — giving the collection's original wheat-straw Floral Embroidery design a second life in liquid silicone.",
+      "The design is laser-engraved directly into the shell in its own colour rather than printed, holding as a fine tonal texture that won't fade, scratch off or peel and staying completely smooth to the touch. A soft fleece lining protects the phone's back panel and camera, and the matte, soft-touch silicone gives a cushioned, anti-slip grip.",
+      "A softer, more lifestyle-driven alternative to the collection's mythology-heavy designs — available in six colourways and cut for the full iPhone 11 to 18 range."
+    ],
+    "craftHeading": "Laser-engraved, not printed.",
+    "craft": [
+      {
+        "img": "texture.jpg",
+        "h": "Same-Colour Laser Engraving",
+        "p": "The pattern is laser-engraved directly into the shell in its own colour — a tonal contrast you can see, but completely smooth and flush to the touch, with no ink layer to fade, scratch off or peel."
+      },
+      {
+        "img": "protection.jpg",
+        "h": "Fleece-Lined, Full Wrap",
+        "p": "A soft fleece lining inside the shell protects the phone's back panel and camera lenses from scratches, with a raised edge and precise cutouts for each phone model."
+      }
+    ],
+    "featureHeading": "Three details that carry the design.",
+    "features": [
+      {
+        "img": "meaning.jpg",
+        "h": "Otomi Embroidery, Flowing Floral Linework",
+        "p": "Flowers, leaves and a bird connected by continuous, flowing stitch-like linework — in the style of Otomi embroidery, one of Mexico's best-known and best-loved textile patterns abroad."
+      },
+      {
+        "img": "material.jpg",
+        "h": "Soft-Touch Liquid Silicone",
+        "p": "A cushioned, matte, anti-slip grip on the outside and a fleece-lined interior on the inside — comfortable to hold and gentle on the phone."
+      },
+      {
+        "img": "colors.jpg",
+        "h": "Six Colourways",
+        "p": "Terracotta, Navy, Yellow, Teal, Red and Charcoal — the same engraving on every colour."
+      }
+    ],
+    "compat": {
+      "img": "sizes.jpg",
+      "heading": "Fits iPhone 11 – 18 series.",
+      "text": "Produced across every model in the iPhone 11 through 18 lineups, in six colourways. Tell us the models and colours you need and we'll confirm exact fit before sampling."
+    },
+    "images": [
+      {
+        "key": "main",
+        "alt": "Floral Embroidery Otomi silicone case, front view"
+      },
+      {
+        "key": "texture",
+        "alt": "Close-up of the laser-engraved pattern"
+      },
+      {
+        "key": "scene-culture",
+        "alt": "Case styled with embroidered textile"
+      },
+      {
+        "key": "fleece",
+        "alt": "Fleece-lined interior protecting the camera and back panel"
+      },
+      {
+        "key": "colors",
+        "alt": "Colourways shown together"
+      },
+      {
+        "key": "hold",
+        "alt": "Case held in hand showing the soft-touch grip"
+      },
+      {
+        "key": "meaning",
+        "alt": "Motif and its cultural meaning"
+      },
+      {
+        "key": "material",
+        "alt": "Liquid silicone material and craft detail"
+      },
+      {
+        "key": "durability",
+        "alt": "Macro of the laser-engraved, smooth-to-the-touch finish"
+      },
+      {
+        "key": "protection",
+        "alt": "Precise cutouts and camera protection"
+      },
+      {
+        "key": "lifestyle",
+        "alt": "Case shown in a lifestyle setting"
+      },
+      {
+        "key": "sizes",
+        "alt": "Colour range and iPhone 11–18 compatibility"
+      }
     ]
   }
 ]
