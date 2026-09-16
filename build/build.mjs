@@ -237,8 +237,9 @@ ${p.steps
   </section>`;
 }
 
-function teamSection(locale) {
+function teamSection({ locale, depth }) {
   const team = site.team;
+  const { asset } = linkers(locale, depth);
   return `
   <section id="studio">
     <div class="wrap">
@@ -251,7 +252,7 @@ function teamSection(locale) {
 ${team.members
   .map(
     (m) => `        <div class="team-card">
-          <span class="avatar"><img src="${m.img}" alt="" loading="lazy" /></span>
+          <span class="avatar"><img src="${asset(m.img)}" alt="" loading="lazy" /></span>
           <span class="tname">${esc(m.name)}</span>
           <span class="trole">${esc(t(m.role, locale))}</span>
           <p class="tbio">${esc(t(m.bio, locale))}</p>
@@ -448,7 +449,7 @@ ${featured}
   <div class="pour-divider"><span></span><span class="bead"></span></div>
 ${processSection(locale)}
   <div class="pour-divider"><span></span><span class="bead"></span></div>
-${teamSection(locale)}
+${teamSection({ locale, depth })}
 ${finalCta({ locale, depth })}
 </main>
 ${footer({ locale, depth })}`;
