@@ -495,7 +495,9 @@ function renderCollection(c, locale) {
       .map(
         (m) => `      <div class="collection-block">
         <p class="collection-label"><span class="n">${esc(ui("material", locale))}</span> ${esc(m)}</p>
-        <div class="collection-grid ${byMaterial[m].length >= 3 ? "grid-3" : "grid-2"}">
+        <div class="collection-grid ${
+          byMaterial[m].length === 4 ? "grid-4" : byMaterial[m].length >= 3 ? "grid-3" : "grid-2"
+        }">
 ${byMaterial[m].map(tile).join("\n")}
         </div>
       </div>`
